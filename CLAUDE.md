@@ -5,7 +5,11 @@ Principe clé : **les mots d'une leçon restent masqués tant que l'élève ne l
 
 ## Lancer
 
-Ouvrir `web/index.html` dans un navigateur (aucun build, aucune dépendance). Les polices viennent de Google Fonts.
+L'appli appelle `/api/progress` (fonction serverless Vercel) pour lire/écrire la progression : ouvrir `web/index.html` directement comme fichier ne fonctionne plus (le `fetch` échoue, faute de runtime de fonction, et l'appli reste bloquée sur l'écran d'erreur de chargement). Il faut donc servir l'appli via Vercel :
+- soit le déploiement en ligne,
+- soit en local avec `vercel dev` (après `vercel env pull` pour récupérer les variables d'environnement Upstash).
+
+`api/progress.js` a besoin de `KV_REST_API_URL` et `KV_REST_API_TOKEN` (ou, à défaut, `UPSTASH_REDIS_REST_URL`/`UPSTASH_REDIS_REST_TOKEN`). Aucun build, aucune dépendance npm ; les polices viennent de Google Fonts.
 
 ## Structure
 

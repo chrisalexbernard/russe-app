@@ -535,7 +535,7 @@
       case 'validate': {
         const date = document.getElementById('lesson-date');
         if (date) ui.lessonDate = date.value;
-        saveProgress(btn, getDone() + 1, ui.lessonDate, () => { ui.sel = []; location.hash = '#/dico'; });
+        saveProgress(btn, getDone() + 1, ui.lessonDate, () => { ui.sel = []; ui.lessonDate = new Date().toLocaleDateString('fr-FR'); location.hash = '#/dico'; });
         return;
       }
       case 'set-done': {
@@ -549,7 +549,6 @@
   });
 
   async function saveProgress(btn, n, date, onDone) {
-    const original = btn.textContent;
     btn.disabled = true;
     btn.textContent = 'Enregistrement…';
     ui.saveError = '';
@@ -558,8 +557,6 @@
       if (onDone) onDone();
       render();
     } catch (e) {
-      btn.disabled = false;
-      btn.textContent = original;
       ui.saveError = 'Échec de l’enregistrement, réessaie.';
       render();
     }
@@ -572,6 +569,6 @@
     render();
   });
 
-  window.addEventListener('hashchange', () => { ui.open = ''; render(); window.scrollTo(0, 0); });
+  window.addEventListener('hashchange', () => { ui.open = ''; ui.saveError = ''; render(); window.scrollTo(0, 0); });
   loadProgress();
 })();

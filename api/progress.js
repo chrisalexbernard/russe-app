@@ -48,6 +48,7 @@ module.exports = async function handler(req, res) {
   }
   try {
     if (req.method === 'GET') {
+      res.setHeader('Cache-Control', 'no-store');
       res.status(200).json(await readState());
       return;
     }
@@ -61,7 +62,7 @@ module.exports = async function handler(req, res) {
       const current = await readState();
       let dates = current.dates;
       if (typeof body.date === 'string' && body.date.trim()) {
-        dates = { ...current.dates, [String(lessonsDone)]: body.date };
+        dates = { ...current.dates, [String(lessonsDone)]: body.date.trim().slice(0, 40) };
       }
       const next = { lessonsDone, dates };
       await upstashSet(KEY, JSON.stringify(next));
@@ -70,6 +71,7 @@ module.exports = async function handler(req, res) {
     }
     res.status(405).json({ error: 'Method not allowed' });
   } catch (e) {
+    console.error(e);
     res.status(500).json({ error: 'Internal error' });
   }
 };
