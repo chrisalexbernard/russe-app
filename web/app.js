@@ -9,22 +9,42 @@
 
   const D = window.DICT;
   const TOTAL = 28;
-  const STORE_KEY = 'russe.lessonsDone';
   const app = document.getElementById('app');
 
-  // ---------- Progression ----------
-  function getDone() {
+  // ---------- Progression (persisted server-side via /api/progress, not localStorage) ----------
+  const state = { done: null, dates: {}, loading: true, error: null };
+  const getDone = () => state.done || 0;
+
+  async function loadProgress() {
+    state.loading = true;
+    state.error = null;
+    render();
     try {
-      const n = parseInt(localStorage.getItem(STORE_KEY), 10);
-      return Number.isFinite(n) ? Math.min(TOTAL, Math.max(0, n)) : 0;
+      const res = await fetch('/api/progress');
+      if (!res.ok) throw new Error('load failed');
+      const body = await res.json();
+      state.done = body.lessonsDone;
+      state.dates = body.dates || {};
+      state.loading = false;
     } catch (e) {
-      return memDone;
+      state.loading = false;
+      state.error = 'load';
     }
+    render();
   }
-  let memDone = 0;
-  function setDone(n) {
-    memDone = Math.min(TOTAL, Math.max(0, n));
-    try { localStorage.setItem(STORE_KEY, String(memDone)); } catch (e) { /* stockage indisponible */ }
+
+  async function setDone(n, date) {
+    const payload = { lessonsDone: Math.min(TOTAL, Math.max(0, n)) };
+    if (date) payload.date = date;
+    const res = await fetch('/api/progress', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    });
+    if (!res.ok) throw new Error('save failed');
+    const body = await res.json();
+    state.done = body.lessonsDone;
+    state.dates = body.dates || {};
   }
 
   // ---------- État d'interface (non persistant) ----------
@@ -221,7 +241,9 @@
     const tiles = [];
     for (let n = 1; n <= TOTAL; n++) {
       const cls = n <= done ? 'done' : n === next ? 'next' : 'locked';
-      const sub = n <= done ? count(n) + ' mots' : n === next ? 'À valider' : 'Verrouillée';
+      const sub = n <= done
+        ? count(n) + ' mots' + (state.dates[n] ? ' · ' + esc(state.dates[n]) : '')
+        : n === next ? 'À valider' : 'Verrouillée';
       const inner = `<span class="dot">${n <= done ? '✓' : n}</span><span style="display:flex;flex-direction:column"><span class="ru" style="font-size:16px">Урок ${n}</span><span style="font-size:12px">${sub}</span></span>`;
       tiles.push(n <= done ? `<a class="lesson-tile ${cls}" href="#/lecon/${n}">${inner}</a>` : `<div class="lesson-tile ${cls}">${inner}</div>`);
     }
@@ -233,6 +255,7 @@
         <h1 class="page-title">Valider une leçon</h1>
         <span class="muted">Quand tu valides une leçon, ses mots et ses verbes apparaissent dans ton dictionnaire.</span>
       </header>
+      ${ui.saveError ? `<p class="muted" style="color:var(--accent-dark)">${esc(ui.saveError)}</p>` : ''}
       <div class="split">
         <div class="side" style="display:flex;flex-direction:column;gap:16px">
           ${next <= TOTAL ? `<section class="card outlined" style="gap:12px">
@@ -452,6 +475,18 @@
     const focusId = active && active.id ? active.id : null;
     const caret = focusId && active.selectionStart != null ? active.selectionStart : null;
 
+    if (state.loading) {
+      app.innerHTML = `<div class="shell" style="align-items:center;justify-content:center"><p class="muted">Chargement…</p></div>`;
+      return;
+    }
+    if (state.error === 'load') {
+      app.innerHTML = `<div class="shell" style="align-items:center;justify-content:center;flex-direction:column;gap:16px">
+        <p class="muted">Impossible de charger ta progression.</p>
+        <button type="button" class="btn" data-action="retry-load">Réessayer</button>
+      </div>`;
+      return;
+    }
+
     const r = route();
     const side = NAV.map(([href, id, label]) => `<a class="side-link${r.id === id ? ' active' : ''}" href="${href}">${icon(id)}${label}</a>`).join('');
     const tabs = [['#/', 'home', 'Accueil'], ['#/dico', 'dico', 'Dico']]
@@ -496,23 +531,39 @@
         ui.open = '';
         break;
       }
+      case 'retry-load': loadProgress(); return;
       case 'validate': {
         const date = document.getElementById('lesson-date');
         if (date) ui.lessonDate = date.value;
-        setDone(getDone() + 1);
-        ui.sel = [];
-        location.hash = '#/dico';
+        saveProgress(btn, getDone() + 1, ui.lessonDate, () => { ui.sel = []; location.hash = '#/dico'; });
         return;
       }
       case 'set-done': {
         const s = document.getElementById('set-done');
-        setDone(parseInt(s.value, 10));
-        break;
+        saveProgress(btn, parseInt(s.value, 10), null, null);
+        return;
       }
       default: return;
     }
     render();
   });
+
+  async function saveProgress(btn, n, date, onDone) {
+    const original = btn.textContent;
+    btn.disabled = true;
+    btn.textContent = 'Enregistrement…';
+    ui.saveError = '';
+    try {
+      await setDone(n, date);
+      if (onDone) onDone();
+      render();
+    } catch (e) {
+      btn.disabled = false;
+      btn.textContent = original;
+      ui.saveError = 'Échec de l’enregistrement, réessaie.';
+      render();
+    }
+  }
 
   app.addEventListener('input', (e) => {
     const key = e.target.dataset && e.target.dataset.input;
@@ -522,5 +573,5 @@
   });
 
   window.addEventListener('hashchange', () => { ui.open = ''; render(); window.scrollTo(0, 0); });
-  render();
+  loadProgress();
 })();
