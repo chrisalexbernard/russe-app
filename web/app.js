@@ -2,7 +2,7 @@
 // Données : window.DICT (dict.js) = { words: [{ ru, l, fr, t, p }], verbs: { inf: { a, pair, g, pres, past, imp, note } } }
 //   ru  : mot avec accent tonique (U+0301)   l : numéro de leçon   fr : traduction
 //   t   : nature (nm, nf, nn, npl, v, adj, adv, pron, prep, conj, num, part, expr)   p : page du livre
-// Progression : nombre de leçons validées, stocké dans localStorage. Les mots des leçons non validées restent masqués.
+// Progression : nombre de leçons validées, persisté côté serveur (api/progress.js). Les mots des leçons non validées restent masqués.
 
 (function () {
   'use strict';
