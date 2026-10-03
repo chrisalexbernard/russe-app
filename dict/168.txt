@@ -1,0 +1,143 @@
+покупа'ть|9|acheter|v
+пол|12|sol, plancher|nm
+поле'зно|26|c'est utile, bon pour la santé|adv
+поли'тик|8|homme politique|nm
+поли'ция|15|police|nf
+по'лный|27|plein ; corpulent|adj
+по'льский|5|polonais|adj
+поля'к/по'лька|5|Polonais / Polonaise|nm
+помидо'р|11|tomate|nm
+помога'ть|18|aider|v
+по-мо'ему|24|à mon avis|adv
+понеде'льник|9|lundi|nm
+понима'ть|7|comprendre|v
+портфе'ль|4|cartable, serviette|nm
+по'сле|14|après|prep
+после'дний|18|dernier|adj
+потеря'ть|28|perdre|v
+пото'м|7|ensuite, puis|adv
+по-ру'сски|5|en russe|adv
+потому' что|9|parce que|conj
+почему'|9|pourquoi|adv
+по'чта|12|poste|nf
+почти'|19|presque|adv
+поэ'тому|26|c'est pourquoi, donc|adv
+пра'вило|11|règle|nn
+пра'вильно|5|correctement ; c'est juste|adv
+пра'здник|20|fête|nm
+предлага'ть|23|proposer|v
+представля'ть себе'|28|s'imaginer|v
+преподава'тель|3|enseignant, professeur|nm
+прекра'сно|4|magnifiquement, parfait|adv
+приве'т|2|salut|expr
+приглаша'ть|18|inviter|v
+прие'хать|21|arriver (en véhicule)|v
+прийти'|21|arriver, venir (à pied)|v
+принима'ть|18|prendre (médicament) ; recevoir|v
+приро'да|20|nature|nf
+присыла'ть|22|envoyer|v
+про'бовать|26|essayer, goûter|v
+провожа'ть|23|raccompagner|v
+продаве'ц|15|vendeur|nm
+проду'кты|9|produits alimentaires, courses|npl
+про'за|28|prose|nf
+проси'ть|13|demander (une faveur)|v
+проспе'кт|8|avenue|nm
+Прости'те!|6|Pardon !|expr
+простуди'ться|14|attraper froid, s'enrhumer|v
+просыпа'ться|19|se réveiller|v
+профе'ссия|3|profession, métier|nf
+пря'мо|21|tout droit|adv
+пря'ник|23|pain d'épices|nm
+пу'таться|24|s'embrouiller, se tromper|v
+пя'тница|9|vendredi|nf
+пятьдеся'т|15|cinquante|num
+пя'тый|5|cinquième|num
+пять|5|cinq|num
+пятьсо'т|15|cinq cents|num
+рабо'та|9|travail|nf
+рабо'тать|6|travailler|v
+рад (-а, -ы)|16|content (de)|adj
+ра'дио|7|radio|nn
+ра'дость|23|joie|nf
+раз|11|fois|nm
+ра'зве|14|est-ce que vraiment ?|part
+разгова'ривать|20|discuter, converser|v
+разгово'рчивый|27|bavard|adj
+ра'зный|12|différent, divers|adj
+разреша'ть|20|permettre|v
+раке'тка|18|raquette|nf
+ра'но|20|tôt|adv
+расска'з|11|récit, nouvelle|nm
+расска'зывать|11|raconter|v
+рассо'льник|11|rassolnik (soupe aux cornichons)|nm
+ребёнок|4|enfant|nm
+реда'кция|23|rédaction|nf
+ре'дкий|28|rare|adj
+ре'дко|16|rarement|adv
+река'|3|rivière, fleuve|nf
+рестора'н|9|restaurant|nm
+реши'ть|15|décider ; résoudre|v
+рисова'ть|19|dessiner|v
+роди'тели|12|parents|npl
+родно'й|5|natal, maternel (langue)|adj
+ро'дственник|25|parent (membre de la famille)|nm
+Рождество'|23|Noël|nn
+ро'за|4|rose|nf
+ро'зовый|8|rose (couleur)|adj
+романти'чный|27|romantique|adj
+росси'йский|8|russe (de Russie)|adj
+рост|27|taille (hauteur)|nm
+рот|14|bouche|nm
+руба'шка|28|chemise|nf
+рубль|15|rouble|nm
+рука'|14|main, bras|nf
+ру'сский|5|russe|adj
+ру'чка|4|stylo|nf
+ры'ба|4|poisson|nf
+ры'нок|12|marché|nm
+рыча'ть|24|grogner, rugir|v
+рюкза'к|2|sac à dos|nm
+ря'дом|25|à côté|adv
+сад|1|jardin|nm
+сайт|6|site web|nm
+саксофо'н|12|saxophone|nm
+сала'т|11|salade|nm
+сам (-а, -и)|23|soi-même, lui-même|pron
+самова'р|8|samovar|nm
+самолёт|19|avion|nm
+самостоя'тельно|26|de façon autonome|adv
+са'мый|24|le plus|pron
+санато'рий|4|sanatorium, maison de repos|nm
+са'хар|9|sucre|nm
+све'тлый|27|clair|adj
+свёкла|11|betterave|nf
+свида'ние|28|rendez-vous (amoureux)|nn
+свобо'дное вре'мя|23|temps libre|expr
+свой|25|son propre|pron
+се'вер|12|nord|nm
+сего'дня|9|aujourd'hui|adv
+седо'й|27|aux cheveux gris|adj
+сейча'с|6|maintenant|adv
+секрета'рь|23|secrétaire|nm
+се'лфи|6|selfie|nn
+семе'йный|27|familial|adj
+семь|7|sept|num
+се'мьдесят|15|soixante-dix|num
+семьсо'т|15|sept cents|num
+семья'|6|famille|nf
+сентя'брь|18|septembre|nm
+се'рый|27|gris|adj
+сестра'|3|sœur|nf
+сиде'ть|18|être assis|v
+си'ла|26|force|nf
+симпати'чный|26|sympathique, mignon|adj
+си'ний|8|bleu foncé|adj
+сказа'ть|6|dire|v
+ска'зка|13|conte|nf
+ско'лько|15|combien|adv
+ско'рая по'мощь|15|ambulance, SAMU|expr
+скро'мный|27|modeste|adj
+ску'чно|26|c'est ennuyeux|adv
+сле'ва|19|à gauche|adv
+сле'дующий|20|suivant, prochain|adj

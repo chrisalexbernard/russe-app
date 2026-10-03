@@ -1,0 +1,137 @@
+сли'вки|23|crème (fraîche)|npl
+слова'рь|4|dictionnaire|nm
+сло'во|8|mot|nn
+случи'ться|26|arriver, se produire|v
+слу'шать|7|écouter|v
+смартфо'н|13|smartphone|nm
+смешно'й|28|drôle|adj
+смея'ться|24|rire|v
+смотре'ть|6|regarder|v
+снача'ла|23|d'abord|adv
+соба'ка|2|chien|nf
+собира'ться|28|s'apprêter à ; se réunir|v
+собо'р|8|cathédrale|nm
+сове'товать|16|conseiller|v
+сове'товаться|23|demander conseil|v
+совреме'нность|28|époque contemporaine|nf
+совреме'нный|23|moderne, contemporain|adj
+совсе'м|18|tout à fait, complètement|adv
+согла'сен|16|d'accord|adj
+соглаша'ться|23|être d'accord, accepter|v
+(к) сожале'нию|9|malheureusement|expr
+сок|11|jus|nm
+сообще'ние|18|message|nn
+со'рок|15|quarante|num
+соси'ска|11|saucisse|nf
+социо'лог|3|sociologue|nm
+спаси'бо|3|merci|expr
+спать|9|dormir|v
+спина'|14|dos|nf
+спо'рить|19|se disputer, débattre|v
+спорт|1|sport|nm
+спортсме'н|11|sportif|nm
+спра'ва|19|à droite|adv
+спра'вочное|15|bureau de renseignements|nn
+спра'шивать|7|demander (une question)|v
+сра'зу|21|tout de suite|adv
+среда'|9|mercredi|nf
+сре'дний|24|moyen|adj
+сро'чно|27|d'urgence|adv
+стадио'н|9|stade|nm
+ста'нция|2|station|nf
+стару'ха|28|vieille femme|nf
+ста'рший|21|aîné, plus âgé|adj
+ста'рый|8|vieux|adj
+стать|20|devenir|v
+статья'|11|article|nf
+стихи'|27|poèmes, vers|npl
+сто|15|cent|num
+сто'ить|15|coûter|v
+стол|3|table|nm
+стоя'ть|19|être debout, se tenir|v
+страна'|2|pays|nf
+стра'нно|22|c'est étrange|adv
+стро'ить|16|construire|v
+студе'нт|3|étudiant|nm
+стул|3|chaise|nm
+стуча'ть|24|frapper, cogner|v
+стюарде'сса|3|hôtesse de l'air|nf
+суббо'та|9|samedi|nf
+сувени'р|9|souvenir (objet)|nm
+су'мка|3|sac|nf
+суп|11|soupe|nm
+сча'стье|23|bonheur|nn
+счита'ть|23|compter ; considérer|v
+сыр|11|fromage|nm
+сюже'т|19|intrigue, sujet|nm
+тайга'|12|taïga|nf
+так|9|ainsi, si, tellement|adv
+такси'|19|taxi|nn
+тако'й|18|tel, si|pron
+там|4|là-bas|adv
+танцева'ть|9|danser|v
+таре'лка|26|assiette|nf
+твой|2|ton, ta, tes|pron
+творо'г|11|fromage blanc (tvorog)|nm
+теа'тр|8|théâtre|nm
+текст|9|texte|nm
+телеви'зор|6|télévision|nm
+температу'ра|14|température, fièvre|nf
+те'ннис|12|tennis|nm
+тепе'рь|12|maintenant|adv
+тетра'дь|4|cahier|nf
+техни'ческий|12|technique|adj
+тёмный|24|sombre, foncé|adj
+тёплый|25|chaud, tiède|adj
+тётя|2|tante|nf
+то'же|3|aussi|adv
+то'лько|18|seulement|adv
+торт|15|gâteau|nm
+традицио'нный|19|traditionnel|adj
+трамва'й|19|tramway|nm
+тре'нер|3|entraîneur|nm
+тре'тий|3|troisième|num
+три|3|trois|num
+три'дцать|15|trente|num
+трина'дцатый|13|treizième|num
+трина'дцать|13|treize|num
+три'ста|15|trois cents|num
+тролле'йбус|19|trolleybus|nm
+тру'дно|7|c'est difficile|adv
+трудолюби'вый|27|travailleur|adj
+туда'|19|là-bas (direction)|adv
+ты|3|tu|pron
+ты'сяча|15|mille|num
+у|27|chez, près de|prep
+убира'ть|28|ranger, faire le ménage|v
+уве'рен (-а, -ы)|16|sûr, certain|adj
+у'гол|12|coin, angle|nm
+уда'ча|13|chance|nf
+удивля'ть|22|étonner|v
+удово'льствие|9|plaisir|nn
+уе'хать|19|partir (en véhicule)|v
+уже'|7|déjà|adv
+у'жин|11|dîner|nm
+у'жинать|16|dîner (verbe)|v
+у'зкий|8|étroit|adj
+узна'ть|27|apprendre (une nouvelle) ; reconnaître|v
+уйти'|19|partir (à pied)|v
+укра'сть|28|voler (dérober)|v
+у'лица|8|rue|nf
+улыба'ться|23|sourire|v
+уме'ть|26|savoir (faire)|v
+умира'ть|26|mourir|v
+у'мный|24|intelligent|adj
+университе'т|12|université|nm
+упражне'ние|4|exercice|nn
+уро'к|1|leçon|nm
+усло'вие|26|condition|nn
+успе'х|23|succès|nm
+уста'л (-а, -и)|16|fatigué|adj
+у'тро|2|matin|nn
+у'хо|14|oreille|nn
+уче'бник|5|manuel|nm
+учени'к|5|élève|nm
+учи'тель|25|instituteur, professeur|nm
+учи'тельница|23|institutrice, professeure|nf
+учи'ть|9|apprendre ; enseigner|v

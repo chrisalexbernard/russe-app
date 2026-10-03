@@ -1,0 +1,92 @@
+учи'ться|12|étudier, faire ses études|v
+ую'тный|12|confortable, douillet|adj
+фами'лия|25|nom de famille|nf
+февра'ль|18|février|nm
+фе'рма|12|ferme|nf
+фигу'ра|27|silhouette, figure|nf
+фи'зик|3|physicien|nm
+филармо'ния|18|philharmonie|nf
+фильм|8|film|nm
+финн/фи'нка|5|Finlandais / Finlandaise|nm
+фи'нский|5|finlandais|adj
+фи'рма|13|entreprise, société|nf
+фле'шка|4|clé USB|nf
+фортепиа'но|12|piano|nn
+фо'рум|12|forum|nm
+фотоаппара'т|14|appareil photo|nm
+фото'граф|3|photographe|nm
+фотогра'фия|4|photographie|nf
+фра'за|14|phrase|nf
+фрукт|11|fruit|nm
+футбо'л|11|football|nm
+футболи'ст|3|footballeur|nm
+фьорд|12|fjord|nm
+хара'ктер|24|caractère|nm
+хи'мик|3|chimiste|nm
+хлеб|9|pain|nm
+ходи'ть|19|aller (à pied, régulièrement), marcher|v
+холоди'льник|28|réfrigérateur|nm
+хо'лодно|14|il fait froid|adv
+хоро'ший|12|bon|adj
+хорошо'|4|bien|adv
+хоте'ть|5|vouloir|v
+худо'жник|3|peintre, artiste|nm
+худо'й|27|maigre, mince|adj
+цветы'|9|fleurs|npl
+целова'ть|13|embrasser|v
+це'лый|16|entier|adj
+центр|2|centre|nm
+чай|11|thé|nm
+ча'сто|8|souvent|adv
+часть|26|partie|nf
+часы'|8|montre, horloge|npl
+чат|12|chat (messagerie)|nm
+ча'шка|8|tasse|nf
+чей|8|à qui|pron
+челове'к|4|personne, être humain|nm
+чемода'н|4|valise|nm
+че'рез|19|à travers ; dans (temps)|prep
+черты' лица'|27|traits du visage|expr
+четве'рг|9|jeudi|nm
+четвёртый|4|quatrième|num
+четы'ре|4|quatre|num
+четы'реста|15|quatre cents|num
+чёрный|8|noir|adj
+чи'стый|28|propre|adj
+чита'ть|6|lire|v
+что|4|que, quoi|pron
+что'бы|25|pour que, afin de|conj
+что'-нибудь|18|quelque chose|pron
+чу'вство|28|sentiment|nn
+чу'вствовать себя'|14|se sentir|v
+чуде'сный|20|merveilleux|adj
+чуть-чу'ть|28|un tout petit peu|adv
+ша'пка|28|bonnet|nf
+шарф|28|écharpe|nm
+ша'хматы|18|échecs (jeu)|npl
+шесто'й|6|sixième|num
+шесть|6|six|num
+шестьдеся'т|15|soixante|num
+шестьсо'т|15|six cents|num
+ше'я|14|cou|nf
+широ'кий|8|large|adj
+шкаф|3|armoire|nm
+шко'ла|3|école|nf
+шко'льник|6|écolier|nm
+шофёр|3|chauffeur|nm
+штат|12|État (fédéré)|nm
+шу'тка|6|plaisanterie|nf
+щи|11|chtchi (soupe au chou)|npl
+эконо'мика|11|économie|nf
+экску'рсия|14|excursion, visite guidée|nf
+экскурсово'д|5|guide|nm
+энерги'чный|27|énergique|adj
+э'то|1|c'est, ce|pron
+э'тот|15|ce, cet|pron
+ю'бка|2|jupe|nf
+юг|12|sud|nm
+я|3|je|pron
+я'блоко|4|pomme|nn
+язы'к|5|langue|nm
+яйцо'|11|œuf|nn
+янва'рь|18|janvier|nm

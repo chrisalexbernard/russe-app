@@ -1,0 +1,139 @@
+господи'н|11|monsieur|nm
+госпожа'|6|madame|nf
+гости'ница|20|hôtel|nf
+гость|18|invité, hôte|nm
+гото'вить|16|préparer ; cuisiner|v
+грамма'тика|11|grammaire|nf
+грипп|14|grippe|nm
+грудь|14|poitrine|nf
+гру'стный|27|triste|adj
+грусть|23|tristesse|nf
+гру'ша|11|poire|nf
+гуля'ть|7|se promener|v
+да|1|oui|part
+дава'ть|16|donner|v
+давно'|7|depuis longtemps, il y a longtemps|adv
+да'же|13|même|part
+далеко'|28|loin|adv
+дари'ть|18|offrir|v
+дать|8|donner|v
+два|2|deux|num
+два'дцать|15|vingt|num
+двена'дцатый|12|douzième|num
+двена'дцать|12|douze|num
+дверь|4|porte|nf
+две'сти|15|deux cents|num
+дворе'ц|19|palais|nm
+двою'родный брат|27|cousin|expr
+де'вичья фами'лия|25|nom de jeune fille|expr
+де'вочка|3|fillette|nf
+де'вушка|15|jeune fille|nf
+девяно'сто|15|quatre-vingt-dix|num
+девятьсо'т|15|neuf cents|num
+девя'тый|9|neuvième|num
+де'вять|9|neuf|num
+де'душка|2|grand-père|nm
+дека'брь|18|décembre|nm
+де'лать|6|faire|v
+дели'ть|26|partager, diviser|v
+де'ло|4|affaire|nn
+день|2|jour, journée|nm
+день рожде'ния|18|anniversaire|expr
+де'ньги|8|argent|npl
+дере'вня|12|village, campagne|nf
+деся'тый|10|dixième|num
+де'сять|10|dix|num
+детекти'в|16|roman policier, polar|nm
+де'ти|4|enfants|npl
+дешёвый|15|bon marché|adj
+джи'нсы|8|jean|npl
+диало'г|11|dialogue|nm
+дли'нный|8|long|adj
+днём|11|l'après-midi, dans la journée|adv
+до'брый|3|bon, gentil|adj
+дово'льно|27|assez|adv
+дое'хать|19|arriver (en véhicule)|v
+дойти'|19|arriver (à pied)|v
+до'лго|16|longtemps|adv
+до'лжен|9|devoir (il doit)|adj
+дом|1|maison|nm
+до'ма|6|à la maison|adv
+дома'шнее зада'ние|9|devoirs (à la maison)|expr
+доро'га|26|route, chemin|nf
+дорого'й|15|cher (prix ; aussi « cher ami », L23)|adj
+до свида'ния|2|au revoir|expr
+доста'точно|27|assez, suffisamment|adv
+дочь|1|fille (enfant)|nf
+друг|1|ami|nm
+друго'й|16|autre|adj
+ду'мать|5|penser|v
+дура'к|28|imbécile|nm
+дура'цкий|27|stupide, idiot|adj
+духи'|18|parfum|npl
+дым|1|fumée|nm
+ды'ня|11|melon|nf
+дя'дя|2|oncle|nm
+его'|5|son, sa, ses (à lui) ; le|pron
+её|5|son, sa, ses (à elle) ; la|pron
+е'здить|19|aller (en véhicule, régulièrement)|v
+е'сли|9|si|conj
+есть|9|manger ; il y a|v
+е'хать|19|aller (en véhicule)|v
+ещё|7|encore|adv
+жа'дный|27|avare, avide|adj
+жале'ть|24|regretter ; avoir pitié|v
+жаль|9|dommage|adv
+жа'рко|28|il fait chaud|adv
+ждать|13|attendre|v
+жела'ть|23|souhaiter|v
+жена'|6|épouse|nf
+жена'тый|27|marié (homme)|adj
+же'нщина|18|femme|nf
+жёлтый|8|jaune|adj
+жи'вопись|19|peinture (art)|nf
+живо'т|14|ventre|nm
+жизнь|23|vie|nf
+жира'ф|12|girafe|nm
+жить|12|vivre, habiter|v
+журна'л|3|magazine, revue|nm
+журнали'ст|3|journaliste|nm
+за|27|derrière ; pour|prep
+заблуди'ться|23|se perdre|v
+забыва'ть|16|oublier|v
+заво'д|1|usine|nm
+за'втра|14|demain|adv
+за'втрак|11|petit-déjeuner|nm
+за'втракать|16|prendre le petit-déjeuner|v
+загора'ть|24|bronzer|v
+зако'нчить|27|terminer|v
+зал|12|salle|nm
+за'пад|12|ouest|nm
+занима'ться|23|s'occuper de, pratiquer (un sport)|v
+за'нят|18|occupé|adj
+заня'тие|13|cours, leçon ; occupation|nn
+заря'дка (заря'дник)|4|chargeur|nf
+засыпа'ть|24|s'endormir|v
+заче'м|26|pourquoi, dans quel but|adv
+звать|1|appeler|v
+звони'ть|9|téléphoner, sonner|v
+зда'ние|1|bâtiment|nn
+здесь|6|ici|adv
+здоро'вье|23|santé|nn
+здра'вствуйте|2|bonjour|expr
+зе'лень|11|fines herbes, verdure|nf
+зелёный|8|vert|adj
+зе'ркало|14|miroir|nn
+зима'|18|hiver|nf
+злой|27|méchant|adj
+знако'миться|23|faire connaissance|v
+знать|6|savoir, connaître|v
+зна'чить|26|signifier|v
+зонт|2|parapluie|nm
+и|1|et|conj
+игра'ть|9|jouer|v
+идти'|19|aller (à pied)|v
+изве'стный|5|célèbre, connu|adj
+извини'те|3|excusez-moi|expr
+изуча'ть|5|étudier|v
+икра'|11|caviar|nf
+и'ли|11|ou|conj

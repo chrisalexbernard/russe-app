@@ -1,0 +1,113 @@
+%%HEAD:Fiche verbe%%
+<div style="width: 390px; height: 844px; box-sizing: border-box; display: flex; flex-direction: column; background: #F3F4F7; font-family: 'PT Sans', sans-serif; color: #161B2E">
+<main style="flex-grow: 1; min-height: 0; overflow-y: auto; display: flex; flex-direction: column; gap: 16px; padding: 20px 20px 24px">
+<div style="display: flex; align-items: center; gap: 10px">
+<a href="Dictionary.dc.html" aria-label="Retour au dictionnaire" style="display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; flex-shrink: 0; border-radius: 22px; background: #FFFFFF; color: #161B2E">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"></path></svg></a>
+<label style="display: flex; flex-direction: column; gap: 2px; flex-grow: 1; font-size: 12px; color: #5A6074">Verbe ({{verbCount}} débloqués)
+<select value="{{key}}" onChange="{{pickVerb}}" style="height: 44px; border: 1px solid #D5D8E0; border-radius: 10px; padding: 0 10px; background: #FFFFFF; font-family: 'PT Serif', serif; font-size: 16px; color: #161B2E">
+<sc-for list="{{options}}" as="o" hint-placeholder-count="5">
+<option value="{{o.k}}">{{o.label}}</option>
+</sc-for>
+</select></label>
+</div>
+
+<sc-if value="{{ready}}" hint-placeholder-val="{{ true }}">
+<header style="display: flex; flex-direction: column; gap: 4px">
+<h1 style="margin: 0; font-family: 'PT Serif', serif; font-size: 38px">{{ru}}</h1>
+<span style="font-family: 'Marck Script', cursive; font-size: 42px; color: #2340A0; line-height: 1.1; border-bottom: 1px solid #C9D3F0">{{cur}}</span>
+<span style="font-size: 18px; margin-top: 4px">{{fr}}</span>
+<div style="display: flex; gap: 6px; flex-wrap: wrap; margin-top: 6px">
+<span style="font-size: 13px; font-weight: 700; padding: 5px 10px; border-radius: 6px; background: #FBE6E4; color: #8E2019">{{aspect}}</span>
+<span style="font-size: 13px; font-weight: 700; padding: 5px 10px; border-radius: 6px; background: #E4E9F7; color: #1C3488">{{group}}</span>
+<sc-if value="{{pair}}" hint-placeholder-val="{{ true }}">
+<span style="font-size: 13px; font-weight: 700; padding: 5px 10px; border-radius: 6px; background: #FFFFFF; color: #3A4056; border: 1px solid #D5D8E0">{{pairLabel}} {{pair}}</span>
+</sc-if>
+<span style="font-size: 13px; font-weight: 700; padding: 5px 10px; border-radius: 6px; background: #FFFFFF; color: #3A4056; border: 1px solid #D5D8E0">Leçon {{lesson}}</span>
+</div>
+</header>
+
+<div role="group" aria-label="Temps" style="display: flex; gap: 4px; background: #E2E4EA; border-radius: 12px; padding: 4px">
+<sc-for list="{{tenses}}" as="t" hint-placeholder-count="4">
+<button type="button" onClick="{{t.pick}}" style="flex: 1 1 0; min-height: 40px; border: none; border-radius: 9px; font: inherit; font-size: 14px; font-weight: 700; cursor: pointer; {{t.style}}">{{t.label}}</button>
+</sc-for>
+</div>
+
+<section style="display: flex; flex-direction: column; background: #FFFFFF; border-radius: 16px; padding: 6px 16px">
+<sc-for list="{{rows}}" as="r" hint-placeholder-count="6">
+<div style="display: grid; grid-template-columns: 64px minmax(0, 1fr) minmax(0, 1fr); align-items: center; gap: 8px; min-height: 54px; border-bottom: 1px solid #ECEEF2">
+<span style="font-size: 15px; color: #5A6074">{{r.p}}</span>
+<span style="font-family: 'PT Serif', serif; font-size: 17px">{{r.stem}}<span style="color: #B42A22; font-weight: 700">{{r.end}}</span>{{r.rest}}</span>
+<span style="font-family: 'Marck Script', cursive; font-size: 23px; color: #2340A0">{{r.cur}}</span>
+</div>
+</sc-for>
+<sc-if value="{{noRows}}" hint-placeholder-val="{{ false }}">
+<span style="font-size: 15px; color: #5A6074; padding: 14px 0">Pas d'impératif pour ce verbe.</span>
+</sc-if>
+</section>
+
+<section style="display: flex; gap: 10px; background: #E4E9F7; border-radius: 14px; padding: 14px 16px; color: #1C3488">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="flex-shrink: 0; margin-top: 1px"><circle cx="12" cy="12" r="9"></circle><path d="M12 11v6M12 7.5v.01"></path></svg>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<span style="font-size: 15px; line-height: 1.4">{{rule}}</span>
+<sc-if value="{{note}}" hint-placeholder-val="{{ false }}">
+<span style="font-size: 15px; line-height: 1.4; color: #8E2019">{{note}}</span>
+</sc-if>
+</div>
+</section>
+</sc-if>
+<sc-if value="{{loading}}" hint-placeholder-val="{{ false }}">
+<span style="font-size: 15px; color: #5A6074">Chargement du dictionnaire…</span>
+</sc-if>
+</main>
+%%TABS:dico%%
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"lessonsDone":{"editor":"int","default":6,"min":1,"max":28,"section":"Démo"},"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+constructor(props) {
+super(props);
+this.state = { data: null, key: '', tense: 'pres' };
+}
+componentDidMount() {
+this.loadDict();
+}
+%%COMMON%%
+renderVals() {
+const { data, tense } = this.state;
+const done = Math.min(28, Math.max(1, this.props.lessonsDone ?? 6));
+const base = { loading: !data, ready: false, options: [], verbCount: 0, key: '', pickVerb: () => {}, tenses: [], rows: [] };
+if (!data) return base;
+const list = data.words.filter((w) => w.t === 'v' && w.l <= done).sort((a, b) => this.sortKey(a).localeCompare(this.sortKey(b), 'ru'));
+if (!list.length) return { ...base, loading: false };
+const keys = list.map((w) => this.strip(w.ru));
+const key = keys.indexOf(this.state.key) >= 0 ? this.state.key : (keys.indexOf('читать') >= 0 ? 'читать' : keys[0]);
+const w = list[keys.indexOf(key)];
+const v = data.verbs[key];
+const pf = v.a === 'pf';
+const tl = pf ? [['pres', 'Futur'], ['past', 'Passé'], ['imp', 'Impér.']] : [['pres', 'Présent'], ['past', 'Passé'], ['fut', 'Futur'], ['imp', 'Impér.']];
+const t = tl.some((x) => x[0] === tense) ? tense : 'pres';
+const inf = key.replace(/\s.*$/, '');
+const rows = this.conj(v, t, inf);
+const rules = {
+pres: pf ? 'Les verbes perfectifs n\'ont pas de présent : ces formes expriment le futur.' : v.g === '1' ? '1re conjugaison : -ю (-у), -ешь, -ет, -ем, -ете, -ют (-ут).' : v.g === '2' ? '2e conjugaison : -ю (-у), -ишь, -ит, -им, -ите, -ят (-ат).' : 'Verbe irrégulier : formes à apprendre par cœur.',
+past: 'Passé : radical + -л (m.), -ла (f.), -ло (n.), -ли (pl.). Il s\'accorde en genre et en nombre, pas en personne.',
+fut: 'Futur composé des imperfectifs : быть au futur + infinitif.',
+imp: 'Impératif : forme en ты et en вы (-те). Avec la négation, on emploie plutôt l\'imperfectif.'
+};
+return {
+loading: false, ready: true, key, verbCount: list.length,
+options: list.map((x) => ({ k: this.strip(x.ru), label: this.strip(x.ru) + ' — ' + x.fr })),
+pickVerb: (e) => this.setState({ key: e.target.value }),
+ru: w.ru, cur: key, fr: w.fr, lesson: w.l,
+aspect: pf ? 'Perfectif' : 'Imperfectif',
+group: v.g === 'irr' ? 'Irrégulier' : v.g === '1' ? '1re conjugaison' : '2e conjugaison',
+pair: v.pair, pairLabel: pf ? 'Imperfectif :' : 'Perfectif :',
+tenses: this.seg(tl, t, 'tense'),
+rows, noRows: rows.length === 0, rule: rules[t], note: v.note
+};
+}
+}
+</script>
+</body>
+</html>

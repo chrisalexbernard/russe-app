@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Carnet de grammaire</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Marck+Script&amp;family=PT+Sans:wght@400;700&amp;family=PT+Serif:wght@400;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#2340A0}a:hover{color:#16296B}
+</style>
+</helmet>
+<div style="width: 390px; height: 1240px; box-sizing: border-box; display: flex; flex-direction: column; background: #F3F4F7; font-family: 'PT Sans', sans-serif; color: #161B2E">
+<main style="flex-grow: 1; display: flex; flex-direction: column; gap: 16px; padding: 28px 20px 20px; overflow: hidden">
+<header style="display: flex; justify-content: space-between; align-items: center; gap: 12px">
+<div style="display: flex; flex-direction: column">
+<h1 style="margin: 0; font-family: 'PT Serif', serif; font-size: 30px">Grammaire</h1>
+<span style="font-family: 'Marck Script', cursive; font-size: 26px; color: #2340A0; line-height: 1">Грамматика</span>
+</div>
+<button type="button" style="display: flex; align-items: center; gap: 6px; min-height: 44px; padding: 0 14px; border: none; border-radius: 12px; background: #B42A22; color: #FFFFFF; font: inherit; font-size: 14px; font-weight: 700; cursor: pointer">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"></path></svg>Règle</button>
+</header>
+
+<label style="display: flex; align-items: center; gap: 8px; height: 46px; background: #FFFFFF; border: 1px solid #D5D8E0; border-radius: 12px; padding: 0 14px; color: #5A6074">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="6"></circle><path d="M20 20l-4.5-4.5"></path></svg>
+<span style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Rechercher une règle</span>
+<input type="search" placeholder="Rechercher : génitif, aspect, -ишь…" style="flex-grow: 1; border: none; outline: none; font: inherit; font-size: 15px; color: #161B2E; background: transparent; min-width: 0">
+</label>
+
+<div style="display: flex; gap: 8px; flex-wrap: wrap">
+<sc-for list="{{cats}}" as="c" hint-placeholder-count="5">
+<button type="button" onClick="{{c.pick}}" style="min-height: 36px; padding: 0 14px; border-radius: 18px; font: inherit; font-size: 14px; cursor: pointer; {{c.style}}">{{c.label}}</button>
+</sc-for>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 8px">
+<sc-for list="{{rules}}" as="r" hint-placeholder-count="6">
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 10px; min-height: 58px; background: #FFFFFF; border-radius: 12px; padding: 10px 14px">
+<div style="display: flex; flex-direction: column; gap: 3px; min-width: 0">
+<span style="font-size: 15px; font-weight: 700">{{r.title}}</span>
+<span style="font-size: 13px; color: #5A6074">{{r.catLabel}} · {{r.lesson}}</span>
+</div>
+<span style="color: #5A6074; font-size: 20px">›</span>
+</div>
+</sc-for>
+</div>
+
+<section style="display: flex; flex-direction: column; gap: 12px; background: #FFFFFF; border-radius: 16px; padding: 16px">
+<div style="display: flex; flex-direction: column; gap: 2px">
+<span style="font-size: 13px; color: #5A6074; text-transform: uppercase; letter-spacing: 0.04em">Déclinaisons · Урок 3</span>
+<h2 style="margin: 0; font-family: 'PT Serif', serif; font-size: 21px">Les 6 cas — singulier</h2>
+</div>
+<div style="overflow-x: auto">
+<table style="width: 100%; border-collapse: collapse; font-size: 14px">
+<thead>
+<tr style="text-align: left; color: #5A6074; font-size: 12px">
+<th style="padding: 6px 4px; font-weight: 700">Cas</th>
+<th style="padding: 6px 4px; font-weight: 700">m.</th>
+<th style="padding: 6px 4px; font-weight: 700">f.</th>
+<th style="padding: 6px 4px; font-weight: 700">n.</th>
+</tr>
+</thead>
+<tbody>
+<sc-for list="{{cases}}" as="c" hint-placeholder-count="6">
+<tr style="border-top: 1px solid #ECEEF2">
+<td style="padding: 8px 4px; vertical-align: top">
+<div style="font-weight: 700">{{c.name}}</div>
+<div style="font-family: 'PT Serif', serif; font-size: 12px; color: #5A6074">{{c.q}}</div>
+</td>
+<td style="padding: 8px 4px; font-family: 'PT Serif', serif; font-size: 16px">{{c.m0}}<span style="color: #B42A22; font-weight: 700">{{c.m1}}</span></td>
+<td style="padding: 8px 4px; font-family: 'PT Serif', serif; font-size: 16px">{{c.f0}}<span style="color: #B42A22; font-weight: 700">{{c.f1}}</span></td>
+<td style="padding: 8px 4px; font-family: 'PT Serif', serif; font-size: 16px">{{c.n0}}<span style="color: #B42A22; font-weight: 700">{{c.n1}}</span></td>
+</tr>
+</sc-for>
+</tbody>
+</table>
+</div>
+</section>
+
+<section style="display: flex; flex-direction: column; gap: 8px; background: #FBE6E4; border-radius: 16px; padding: 16px; color: #5E1510">
+<span style="font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em">Exception · Orthographe</span>
+<span style="font-size: 16px; font-weight: 700">Règle des 7 lettres</span>
+<span style="font-size: 15px; line-height: 1.4">Après г, к, х, ж, ш, щ, ч on écrit toujours <b>и</b>, jamais <b>ы</b>.</span>
+<div style="display: flex; gap: 16px; align-items: baseline; flex-wrap: wrap">
+<span style="font-family: 'PT Serif', serif; font-size: 18px">кни́ги</span>
+<span style="font-family: 'Marck Script', cursive; font-size: 24px; color: #2340A0">книги</span>
+<span style="font-size: 14px">(et non «книгы»)</span>
+</div>
+</section>
+</main>
+
+<nav style="display: flex; justify-content: space-around; align-items: center; height: 76px; background: #FFFFFF; border-top: 1px solid #E2E4EA; padding: 0 8px 8px">
+<a href="Main.dc.html" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; min-width: 64px; min-height: 52px; text-decoration: none; font-size: 12px; color: #5A6074">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1z"></path></svg>Accueil</a>
+<a href="Dictionary.dc.html" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; min-width: 64px; min-height: 52px; text-decoration: none; font-size: 12px; color: #5A6074">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4.5A1.5 1.5 0 0 1 5.5 3H20v15H5.5A1.5 1.5 0 0 0 4 19.5z"></path><path d="M4 19.5A1.5 1.5 0 0 0 5.5 21H20"></path></svg>Dico</a>
+<a href="LogLesson.dc.html" aria-label="Valider une leçon" style="display: flex; align-items: center; justify-content: center; width: 52px; height: 52px; border-radius: 26px; background: #B42A22; color: #FFFFFF">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"></path></svg></a>
+<a href="Grammar.dc.html" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; min-width: 64px; min-height: 52px; text-decoration: none; font-size: 12px; color: #B42A22; font-weight: 700">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"></rect><path d="M3 10h18M9 4v16"></path></svg>Grammaire</a>
+</nav>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":1240}}'>
+class Component extends DCLogic {
+constructor(props) {
+super(props);
+this.state = { cat: 'all' };
+}
+renderVals() {
+const cat = this.state.cat;
+const labels = { decl: 'Déclinaisons', conj: 'Conjugaisons', exc: 'Exceptions', orth: 'Orthographe' };
+const all = [
+{ title: 'Les 6 cas — singulier', c: 'decl', lesson: 'Урок 3' },
+{ title: 'Accusatif des noms animés', c: 'decl', lesson: 'Урок 3' },
+{ title: '1re conjugaison : -ешь / -ут', c: 'conj', lesson: 'Урок 1' },
+{ title: '2e conjugaison : -ишь / -ат, -ят', c: 'conj', lesson: 'Урок 1' },
+{ title: 'Pluriels irréguliers : друг → друзья́', c: 'exc', lesson: 'Урок 1' },
+{ title: 'Règle des 7 lettres (и / ы)', c: 'orth', lesson: 'Урок 2' }
+];
+const cats = [['all', 'Toutes'], ['decl', 'Déclinaisons'], ['conj', 'Conjugaisons'], ['exc', 'Exceptions'], ['orth', 'Orthographe']].map(([id, label]) => ({
+label,
+style: id === cat ? 'background: #161B2E; color: #FFFFFF; border: 1px solid #161B2E' : 'background: #FFFFFF; color: #161B2E; border: 1px solid #D5D8E0',
+pick: () => this.setState({ cat: id })
+}));
+const rules = all.filter((r) => cat === 'all' || r.c === cat).map((r) => ({ ...r, catLabel: labels[r.c] }));
+const cases = [
+{ name: 'Nominatif', q: 'кто? что?', m0: 'стол', m1: '', f0: 'книг', f1: 'а', n0: 'окн', n1: 'о' },
+{ name: 'Génitif', q: 'кого? чего?', m0: 'стол', m1: 'а', f0: 'книг', f1: 'и', n0: 'окн', n1: 'а' },
+{ name: 'Datif', q: 'кому? чему?', m0: 'стол', m1: 'у', f0: 'книг', f1: 'е', n0: 'окн', n1: 'у' },
+{ name: 'Accusatif', q: 'кого? что?', m0: 'стол', m1: '', f0: 'книг', f1: 'у', n0: 'окн', n1: 'о' },
+{ name: 'Instrumental', q: 'кем? чем?', m0: 'стол', m1: 'ом', f0: 'книг', f1: 'ой', n0: 'окн', n1: 'ом' },
+{ name: 'Prépositionnel', q: 'о ком? о чём?', m0: 'о стол', m1: 'е', f0: 'о книг', f1: 'е', n0: 'об окн', n1: 'е' }
+];
+return { cats, rules, cases };
+}
+}
+</script>
+</body>
+</html>

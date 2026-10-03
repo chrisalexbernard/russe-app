@@ -1,0 +1,124 @@
+%%HEAD:Dictionnaire%%
+<div style="width: 390px; height: 844px; box-sizing: border-box; display: flex; flex-direction: column; background: #F3F4F7; font-family: 'PT Sans', sans-serif; color: #161B2E">
+<main style="flex-grow: 1; min-height: 0; overflow-y: auto; display: flex; flex-direction: column; gap: 14px; padding: 28px 20px 20px">
+<header style="display: flex; flex-direction: column">
+<h1 style="margin: 0; font-family: 'PT Serif', serif; font-size: 30px">Dictionnaire</h1>
+<span style="font-family: 'Marck Script', cursive; font-size: 28px; color: #2340A0; line-height: 1.05">Словарь</span>
+</header>
+
+<section style="display: flex; flex-direction: column; gap: 8px; background: #161B2E; color: #FFFFFF; border-radius: 14px; padding: 14px 16px">
+<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 8px">
+<span style="font-size: 15px; font-weight: 700">Leçons 1 à {{done}} débloquées</span>
+<span style="font-size: 14px; color: #C3C8D8">{{count}} mots</span>
+</div>
+<div style="height: 8px; border-radius: 4px; background: #39405A; overflow: hidden">
+<div style="height: 8px; width: {{pct}}; border-radius: 4px; background: #E0685F"></div>
+</div>
+<span style="font-size: 13px; color: #C3C8D8">{{done}} leçons validées sur 28</span>
+</section>
+
+<label style="display: flex; align-items: center; gap: 8px; height: 46px; flex-shrink: 0; background: #FFFFFF; border: 1px solid #D5D8E0; border-radius: 12px; padding: 0 14px; color: #5A6074">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="6"></circle><path d="M20 20l-4.5-4.5"></path></svg>
+<span style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Rechercher un mot</span>
+<input type="search" value="{{q}}" onChange="{{onQ}}" placeholder="Chercher en russe ou en français" style="flex-grow: 1; border: none; outline: none; font: inherit; font-size: 15px; color: #161B2E; background: transparent; min-width: 0">
+</label>
+
+<div style="display: flex; gap: 8px; flex-wrap: wrap">
+<div role="group" aria-label="Classement" style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4px; background: #E2E4EA; border-radius: 12px; padding: 4px; flex-grow: 1">
+<sc-for list="{{sorts}}" as="s" hint-placeholder-count="2">
+<button type="button" onClick="{{s.pick}}" style="min-height: 38px; border: none; border-radius: 9px; font: inherit; font-size: 14px; font-weight: 700; cursor: pointer; {{s.style}}">{{s.label}}</button>
+</sc-for>
+</div>
+<div role="group" aria-label="Écriture affichée" style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 4px; background: #E2E4EA; border-radius: 12px; padding: 4px; flex-grow: 1">
+<sc-for list="{{modes}}" as="m" hint-placeholder-count="3">
+<button type="button" onClick="{{m.pick}}" style="min-height: 38px; border: none; border-radius: 9px; font: inherit; font-size: 13px; font-weight: 700; cursor: pointer; {{m.style}}">{{m.label}}</button>
+</sc-for>
+</div>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 6px">
+<span style="font-size: 13px; color: #5A6074">Leçons affichées <span style="color: #161B2E; font-weight: 700">· {{selLabel}} · {{shown}} mots</span></span>
+<div role="group" aria-label="Filtrer par leçon" style="display: flex; gap: 6px; flex-wrap: nowrap; overflow-x: auto; padding-bottom: 4px; margin: 0 -20px; padding-left: 20px; padding-right: 20px">
+<sc-for list="{{lessonChips}}" as="c" hint-placeholder-count="7">
+<button type="button" onClick="{{c.pick}}" aria-pressed="{{c.on}}" style="flex-shrink: 0; min-width: 44px; min-height: 40px; padding: 0 12px; border-radius: 20px; font: inherit; font-size: 14px; font-weight: 700; cursor: pointer; {{c.style}}">{{c.label}}</button>
+</sc-for>
+</div>
+</div>
+
+<sc-if value="{{loading}}" hint-placeholder-val="{{ false }}">
+<span style="font-size: 15px; color: #5A6074; padding: 20px 0">Chargement du dictionnaire…</span>
+</sc-if>
+<sc-if value="{{empty}}" hint-placeholder-val="{{ false }}">
+<span style="font-size: 15px; color: #5A6074; padding: 12px 0">Aucun mot trouvé dans les leçons débloquées.</span>
+</sc-if>
+
+<sc-for list="{{groups}}" as="g" hint-placeholder-count="3">
+<section style="display: flex; flex-direction: column; gap: 6px">
+<h2 style="margin: 6px 2px 0; font-family: 'PT Serif', serif; font-size: 18px; color: #B42A22">{{g.head}}</h2>
+<div style="display: flex; flex-direction: column; background: #FFFFFF; border-radius: 12px; padding: 0 14px">
+<sc-for list="{{g.items}}" as="w" hint-placeholder-count="3">
+<div style="display: flex; flex-direction: column; gap: 4px; border-bottom: 1px solid #ECEEF2; padding: 10px 0">
+%%WORDROW%%
+</div>
+</sc-for>
+</div>
+</section>
+</sc-for>
+
+<sc-if value="{{hasNext}}" hint-placeholder-val="{{ true }}">
+<section style="display: flex; flex-direction: column; gap: 10px; border: 1.5px dashed #9AA1B5; border-radius: 14px; padding: 14px 16px; color: #5A6074">
+<div style="display: flex; align-items: center; gap: 12px">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0"><rect x="5" y="11" width="14" height="10" rx="2"></rect><path d="M8 11V8a4 4 0 0 1 8 0v3"></path></svg>
+<span style="font-size: 14px; line-height: 1.4">Les mots des leçons {{next}} à 28 sont masqués. Ils apparaîtront quand tu valideras ces leçons.</span>
+</div>
+<button type="button" onClick="{{unlockNext}}" style="min-height: 44px; border-radius: 10px; border: 1px solid #B42A22; background: #FFFFFF; color: #8E2019; font: inherit; font-size: 14px; font-weight: 700; cursor: pointer">Démo : valider la leçon {{next}}</button>
+</section>
+</sc-if>
+</main>
+%%TABS:dico%%
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"lessonsDone":{"editor":"int","default":6,"min":1,"max":28,"section":"Démo"},"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+constructor(props) {
+super(props);
+this.state = { data: null, extra: 0, sort: 'alpha', mode: 'both', q: '', open: '', sel: [] };
+}
+componentDidMount() {
+this.loadDict();
+}
+%%COMMON%%
+renderVals() {
+const { data, extra, sort, mode, q, open } = this.state;
+const sel = this.state.sel.filter((n) => n <= Math.min(28, Math.max(1, (this.props.lessonsDone ?? 6) + extra)));
+const done = Math.min(28, Math.max(1, (this.props.lessonsDone ?? 6) + extra));
+const base = {
+done, next: done + 1, hasNext: done < 28, pct: Math.round(done / 28 * 100) + '%',
+sorts: this.seg([['alpha', 'А–Я'], ['lesson', 'Par leçon']], sort, 'sort'),
+modes: this.seg([['both', 'Les deux'], ['print', 'Impr.'], ['cursive', 'Cursive']], mode, 'mode'),
+q, onQ: (e) => this.setState({ q: e.target.value }),
+unlockNext: () => this.setState({ extra: extra + 1, open: '' }),
+loading: !data, empty: false, groups: [], count: 0, shown: 0,
+selLabel: sel.length ? (sel.length === 1 ? 'leçon ' : 'leçons ') + sel.slice().sort((a, b) => a - b).join(', ') : 'toutes les leçons validées',
+lessonChips: this.lessonChips(done, sel)
+};
+if (!data) return base;
+const query = this.strip(q).toLowerCase().trim();
+const avail = data.words.filter((w) => w.l <= done);
+const picked = avail.filter((w) => !sel.length || sel.indexOf(w.l) >= 0);
+const words = picked.filter((w) => !query || this.strip(w.ru).toLowerCase().indexOf(query) >= 0 || w.fr.toLowerCase().indexOf(query) >= 0);
+const byKey = (a, b) => this.sortKey(a).localeCompare(this.sortKey(b), 'ru');
+const sorted = words.slice().sort(sort === 'alpha' ? byKey : (a, b) => a.l - b.l || byKey(a, b));
+const groups = [];
+const index = {};
+sorted.forEach((w) => {
+const head = sort === 'alpha' ? (this.sortKey(w)[0] || '').toUpperCase() : 'Урок ' + w.l;
+if (!index[head]) { index[head] = { head, items: [] }; groups.push(index[head]); }
+index[head].items.push(this.item(w, data, open, mode));
+});
+return { ...base, groups, count: avail.length, shown: words.length, empty: words.length === 0 };
+}
+}
+</script>
+</body>
+</html>

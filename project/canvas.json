@@ -1,0 +1,149 @@
+{
+  "v": 3,
+  "attachments": {},
+  "boards": {
+    "Grammar.dc.html": {
+      "h": 1240,
+      "is_interactive": true,
+      "title": "Carnet de grammaire",
+      "w": 390,
+      "x": 1880,
+      "y": 0
+    },
+    "Lesson.dc.html": {
+      "h": 844,
+      "is_interactive": true,
+      "title": "Leçon — mots & traductions",
+      "w": 390,
+      "x": 940,
+      "y": 0
+    },
+    "LogLesson.dc.html": {
+      "h": 844,
+      "is_interactive": true,
+      "title": "Valider une leçon",
+      "w": 390,
+      "x": 470,
+      "y": 0
+    },
+    "Main.dc.html": {
+      "h": 844,
+      "is_interactive": true,
+      "title": "Accueil",
+      "w": 390,
+      "x": 0,
+      "y": 0
+    },
+    "Verb.dc.html": {
+      "h": 844,
+      "is_interactive": true,
+      "title": "Fiche verbe — conjugaison",
+      "w": 390,
+      "x": 1410,
+      "y": 0
+    },
+    "Dictionary.dc.html": {
+      "x": 2350,
+      "y": 0,
+      "w": 390,
+      "h": 844,
+      "title": "Dictionnaire (leçons débloquées)",
+      "is_interactive": true
+    },
+    "Desktop.dc.html": {
+      "x": 6800,
+      "y": 1600,
+      "w": 1280,
+      "h": 1500,
+      "title": "Ordinateur — Dictionnaire",
+      "expand": "fill",
+      "is_interactive": true
+    },
+    "DesktopHome.dc.html": {
+      "x": 0,
+      "y": 1600,
+      "w": 1280,
+      "h": 900,
+      "title": "Ordinateur — Accueil",
+      "expand": "fill",
+      "is_interactive": true
+    },
+    "DesktopLog.dc.html": {
+      "x": 1360,
+      "y": 1600,
+      "w": 1280,
+      "h": 900,
+      "title": "Ordinateur — Valider une leçon",
+      "expand": "fill",
+      "is_interactive": true
+    },
+    "DesktopLesson.dc.html": {
+      "x": 2720,
+      "y": 1600,
+      "w": 1280,
+      "h": 1100,
+      "title": "Ordinateur — Leçon",
+      "expand": "fill",
+      "is_interactive": true
+    },
+    "DesktopVerb.dc.html": {
+      "x": 4080,
+      "y": 1600,
+      "w": 1280,
+      "h": 960,
+      "title": "Ordinateur — Verbes",
+      "expand": "fill",
+      "is_interactive": true
+    },
+    "DesktopGrammar.dc.html": {
+      "x": 5440,
+      "y": 1600,
+      "w": 1280,
+      "h": 960,
+      "title": "Ordinateur — Grammaire",
+      "expand": "fill",
+      "is_interactive": true
+    }
+  },
+  "createdOnFiles": {
+    "at": "2026-10-03T10:00:00Z",
+    "v": 1
+  },
+  "designSystems": [],
+  "launch": {
+    "view": "canvas"
+  },
+  "notes": {
+    "t": {
+      "kind": "title1",
+      "maxW": 2740,
+      "text": "Русский — version mobile",
+      "w": 240,
+      "x": 0,
+      "y": -300
+    },
+    "desk": {
+      "x": 0,
+      "y": 1300,
+      "text": "Version ordinateur",
+      "kind": "title1",
+      "maxW": 8080
+    }
+  },
+  "order": [
+    "Main.dc.html",
+    "LogLesson.dc.html",
+    "Lesson.dc.html",
+    "Verb.dc.html",
+    "Grammar.dc.html",
+    "Dictionary.dc.html",
+    "DesktopHome.dc.html",
+    "DesktopLog.dc.html",
+    "DesktopLesson.dc.html",
+    "DesktopVerb.dc.html",
+    "DesktopGrammar.dc.html",
+    "Desktop.dc.html"
+  ],
+  "pages": [],
+  "title": "Appli d'apprentissage du russe"
+}

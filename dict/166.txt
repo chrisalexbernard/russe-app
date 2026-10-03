@@ -1,0 +1,142 @@
+и'мя|25|prénom|nn
+инжене'р|3|ingénieur|nm
+иногда'|13|parfois|adv
+иностра'нец|6|étranger (personne)|nm
+иностра'нный|8|étranger (adj.)|adj
+интере'сный|13|intéressant|adj
+интересова'ться|23|s'intéresser à|v
+иска'ть|16|chercher|v
+иску'сство|19|art|nn
+испа'нец/испа'нка|5|Espagnol / Espagnole|nm
+испа'нский|5|espagnol|adj
+истори'ческий|12|historique|adj
+исто'рия|11|histoire|nf
+исчеза'ть|28|disparaître|v
+и так да'лее|26|et ainsi de suite, etc.|expr
+ию'ль|18|juillet|nm
+ию'нь|18|juin|nm
+ка'ждый|16|chaque|pron
+ка'жется (мне)|16|il (me) semble|expr
+как|4|comment, comme|adv
+како'й|5|quel|pron
+капу'ста|11|chou|nf
+каранда'ш|3|crayon|nm
+ка'рий|27|marron (yeux)|adj
+ка'рта|1|carte|nf
+карти'на|11|tableau (peinture)|nf
+карто'фель|11|pommes de terre|nm
+ката'ться|24|faire du (vélo, ski, patin…)|v
+ка'ша|11|kacha, bouillie|nf
+ка'шель|14|toux|nm
+кафе'|2|café (lieu)|nn
+кварти'ра|8|appartement|nf
+кенгуру'|12|kangourou|nm
+кино'|12|cinéma|nn
+кни'га|3|livre|nf
+когда'|11|quand|adv
+колбаса'|11|saucisson|nf
+коме'дия|11|comédie|nf
+коммента'рий|11|commentaire|nm
+ко'мната|1|pièce, chambre|nf
+комплиме'нт|27|compliment|nm
+компо'т|11|compote (boisson)|nm
+компью'тер|4|ordinateur|nm
+коне'ц|21|fin|nm
+коне'чно|5|bien sûr|adv
+контро'льная рабо'та|9|contrôle, interrogation écrite|expr
+конфе'та|15|bonbon|nf
+конце'рт|11|concert|nm
+конча'ть(ся)|16|finir, se terminer|v
+коро'бка|15|boîte|nf
+коро'ткий|8|court|adj
+костю'м|15|costume|nm
+кори'чневый|8|marron, brun|adj
+кот|2|chat|nm
+кото'рый|16|qui, lequel|pron
+ко'фе|2|café (boisson)|nm
+ко'шка|26|chatte, chat|nf
+краси'вый|7|beau, joli|adj
+кра'сный|8|rouge|adj
+кре'сло|4|fauteuil|nn
+крова'ть|4|lit|nf
+крокоди'л|12|crocodile|nm
+кро'ме|28|sauf, excepté|prep
+кста'ти|13|à propos|adv
+кто|1|qui|pron
+культу'рный|27|cultivé, poli|adj
+купи'ть|9|acheter|v
+кури'ть|6|fumer|v
+куро'рт|9|station balnéaire|nm
+ку'ртка|24|veste, blouson|nf
+ку'хня|12|cuisine|nf
+ла'мпа|4|lampe|nf
+легко'|7|facilement ; c'est facile|adv
+лежа'ть|12|être couché, se trouver (à plat)|v
+лека'рство|14|médicament|nn
+ле'кция|9|cours magistral, conférence|nf
+лени'вый|27|paresseux|adj
+лес|12|forêt|nm
+литерату'ра|4|littérature|nf
+лист|20|feuille|nm
+лить|26|verser|v
+ле'то|18|été|nn
+лицо'|27|visage|nn
+ложи'ться|16|se coucher|v
+ло'жка|3|cuillère|nf
+лук|11|oignon|nm
+лу'чше|15|mieux|adv
+люби'ть|11|aimer|v
+любо'вь|28|amour|nf
+любопы'тный|27|curieux|adj
+любопы'тство|28|curiosité|nn
+лю'ди|4|gens|npl
+магази'н|1|magasin|nm
+май|18|mai|nm
+макаро'ны|11|pâtes|npl
+ма'ленький|8|petit|adj
+ма'ло|7|peu|adv
+ма'льчик|3|garçon|nm
+ма'рка|15|timbre ; marque|nf
+март|18|mars|nm
+ма'сло|11|beurre, huile|nn
+матрёшка|5|poupée russe|nf
+мать|4|mère|nf
+маши'на|4|voiture|nf
+медве'дь|24|ours|nm
+ме'дленно|7|lentement|adv
+медсестра'|3|infirmière|nf
+ме'жду|23|entre|prep
+ме'сто|2|place, endroit|nn
+ме'сяц|13|mois|nm
+метро'|1|métro|nn
+мечта'тельно|22|rêveusement|adv
+мечта'ть|19|rêver|v
+меша'ть|28|déranger, gêner|v
+мла'дший|17|cadet, plus jeune|adj
+мно'го|7|beaucoup|adv
+мо'жно|7|on peut, il est permis|adv
+мой|2|mon, ma, mes|pron
+молодёжный|23|pour les jeunes|adj
+молодёжь|23|jeunesse, les jeunes|nf
+молодо'й|18|jeune|adj
+молоко'|9|lait|nn
+молчали'вый|27|silencieux, taciturne|adj
+молча'ть|28|se taire|v
+мо'ре|3|mer|nn
+морко'вь|11|carotte|nf
+моро'женое|11|glace (dessert)|nn
+моря'к|3|marin|nm
+мост|19|pont|nm
+мотоци'кл|19|moto|nm
+мочь|9|pouvoir|v
+муж|3|mari|nm
+мужчи'на|18|homme|nm
+музе'й|4|musée|nm
+му'зыка|1|musique|nf
+музыка'нт|3|musicien|nm
+мультфи'льм|24|dessin animé|nm
+мы|3|nous|pron
+мя'со|11|viande|nn
+на|12|sur, à|prep
+наве'рное|19|probablement|adv
+над|28|au-dessus de|prep

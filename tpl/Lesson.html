@@ -1,0 +1,74 @@
+%%HEAD:Leçon%%
+<div style="width: 390px; height: 844px; box-sizing: border-box; display: flex; flex-direction: column; background: #F3F4F7; font-family: 'PT Sans', sans-serif; color: #161B2E">
+<main style="flex-grow: 1; min-height: 0; overflow-y: auto; display: flex; flex-direction: column; gap: 14px; padding: 20px 20px 20px">
+<header style="display: flex; align-items: center; justify-content: space-between; gap: 8px">
+<button type="button" onClick="{{prev}}" disabled="{{noPrev}}" aria-label="Leçon précédente" style="display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 22px; border: none; background: #FFFFFF; color: #161B2E; cursor: pointer; {{prevStyle}}">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"></path></svg></button>
+<div style="display: flex; flex-direction: column; align-items: center">
+<h1 style="margin: 0; font-family: 'PT Serif', serif; font-size: 28px">Урок {{n}}</h1>
+<span style="font-family: 'Marck Script', cursive; font-size: 26px; color: #2340A0; line-height: 1">Урок {{n}}</span>
+</div>
+<button type="button" onClick="{{nextL}}" disabled="{{noNext}}" aria-label="Leçon suivante" style="display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 22px; border: none; background: #FFFFFF; color: #161B2E; cursor: pointer; {{nextStyle}}">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"></path></svg></button>
+</header>
+<span style="font-size: 15px; color: #3A4056; text-align: center">Leçon {{n}} sur {{done}} validées · {{count}} mots · {{verbs}} verbes</span>
+
+<div role="group" aria-label="Écriture affichée" style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 4px; background: #E2E4EA; border-radius: 12px; padding: 4px">
+<sc-for list="{{modes}}" as="m" hint-placeholder-count="3">
+<button type="button" onClick="{{m.pick}}" style="min-height: 40px; border: none; border-radius: 9px; font: inherit; font-size: 14px; font-weight: 700; cursor: pointer; {{m.style}}">{{m.label}}</button>
+</sc-for>
+</div>
+
+<div style="display: flex; gap: 8px; flex-wrap: wrap">
+<sc-for list="{{filters}}" as="f" hint-placeholder-count="4">
+<button type="button" onClick="{{f.pick}}" style="min-height: 36px; padding: 0 14px; border-radius: 18px; font: inherit; font-size: 14px; cursor: pointer; {{f.style}}">{{f.label}}</button>
+</sc-for>
+</div>
+
+<sc-if value="{{loading}}" hint-placeholder-val="{{ false }}">
+<span style="font-size: 15px; color: #5A6074; padding: 20px 0">Chargement du dictionnaire…</span>
+</sc-if>
+
+<div style="display: flex; flex-direction: column; gap: 8px">
+<sc-for list="{{words}}" as="w" hint-placeholder-count="6">
+<article style="display: flex; flex-direction: column; gap: 4px; background: #FFFFFF; border-radius: 14px; padding: 12px 14px">
+%%WORDROW%%
+</article>
+</sc-for>
+</div>
+</main>
+%%TABS:lesson%%
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"lessonsDone":{"editor":"int","default":6,"min":1,"max":28,"section":"Démo"},"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+constructor(props) {
+super(props);
+this.state = { data: null, n: 0, mode: 'both', filter: 'all', open: '' };
+}
+componentDidMount() {
+this.loadDict();
+}
+%%COMMON%%
+renderVals() {
+const { data, mode, filter, open } = this.state;
+const done = Math.min(28, Math.max(1, this.props.lessonsDone ?? 6));
+const n = Math.min(this.state.n || done, done);
+const off = 'opacity: 0.35; cursor: default';
+const base = {
+n, done, loading: !data, words: [], count: 0, verbs: 0,
+noPrev: n <= 1, noNext: n >= done, prevStyle: n <= 1 ? off : '', nextStyle: n >= done ? off : '',
+prev: () => this.setState({ n: Math.max(1, n - 1), open: '' }),
+nextL: () => this.setState({ n: Math.min(done, n + 1), open: '' }),
+modes: this.seg([['both', 'Les deux'], ['print', 'Imprimé'], ['cursive', 'Cursive']], mode, 'mode'),
+filters: this.chips([['all', 'Tous'], ['n', 'Noms'], ['v', 'Verbes'], ['e', 'Expressions'], ['o', 'Autres']], filter, 'filter')
+};
+if (!data) return base;
+const all = data.words.filter((w) => w.l === n).sort((a, b) => this.sortKey(a).localeCompare(this.sortKey(b), 'ru')).map((w) => this.item(w, data, open, mode));
+const words = all.filter((w) => filter === 'all' || w.kind === filter);
+return { ...base, words, count: all.length, verbs: all.filter((w) => w.isVerb).length };
+}
+}
+</script>
+</body>
+</html>

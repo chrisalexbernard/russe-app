@@ -1,0 +1,47 @@
+<div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 10px">
+<div style="display: flex; flex-direction: column; min-width: 0">
+<div style="display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap">
+<sc-if value="{{w.showPrint}}" hint-placeholder-val="{{ true }}">
+<span style="font-family: 'PT Serif', serif; font-size: 18px; font-weight: 700">{{w.ru}}</span>
+</sc-if>
+<sc-if value="{{w.showCursive}}" hint-placeholder-val="{{ true }}">
+<span style="font-family: 'Marck Script', cursive; font-size: 23px; color: #2340A0">{{w.cur}}</span>
+</sc-if>
+</div>
+<span style="font-size: 15px; color: #3A4056">{{w.fr}}</span>
+</div>
+<div style="display: flex; flex-direction: column; align-items: flex-end; gap: 4px; flex-shrink: 0">
+<span style="font-size: 11px; font-weight: 700; padding: 3px 7px; border-radius: 6px; white-space: nowrap; {{w.tagStyle}}">{{w.tagLabel}}</span>
+<span style="font-size: 11px; color: #5A6074">Leçon {{w.l}}</span>
+</div>
+</div>
+<sc-if value="{{w.isVerb}}" hint-placeholder-val="{{ false }}">
+<button type="button" onClick="{{w.toggle}}" style="align-self: flex-start; min-height: 40px; padding: 0; border: none; background: transparent; color: #2340A0; font: inherit; font-size: 14px; font-weight: 700; cursor: pointer">{{w.toggleLabel}}</button>
+</sc-if>
+<sc-if value="{{w.isOpen}}" hint-placeholder-val="{{ false }}">
+<div style="display: flex; flex-direction: column; gap: 8px; background: #F7F8FA; border-radius: 10px; padding: 12px">
+<span style="font-size: 13px; color: #3A4056">{{w.info}}</span>
+<span style="font-size: 12px; font-weight: 700; color: #5A6074; text-transform: uppercase; letter-spacing: 0.04em">{{w.presLabel}}</span>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px 12px">
+<sc-for list="{{w.pres}}" as="r" hint-placeholder-count="6">
+<div style="display: flex; flex-direction: column">
+<span style="font-family: 'PT Serif', serif; font-size: 15px"><span style="color: #5A6074">{{r.p}} </span>{{r.stem}}<span style="color: #B42A22; font-weight: 700">{{r.end}}</span></span>
+<span style="font-family: 'Marck Script', cursive; font-size: 19px; color: #2340A0">{{r.cur}}</span>
+</div>
+</sc-for>
+</div>
+<span style="font-size: 12px; font-weight: 700; color: #5A6074; text-transform: uppercase; letter-spacing: 0.04em">Passé</span>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px 12px">
+<sc-for list="{{w.past}}" as="r" hint-placeholder-count="4">
+<div style="display: flex; flex-direction: column">
+<span style="font-family: 'PT Serif', serif; font-size: 15px"><span style="color: #5A6074">{{r.p}} </span>{{r.stem}}<span style="color: #B42A22; font-weight: 700">{{r.end}}</span></span>
+<span style="font-family: 'Marck Script', cursive; font-size: 19px; color: #2340A0">{{r.cur}}</span>
+</div>
+</sc-for>
+</div>
+<sc-if value="{{w.note}}" hint-placeholder-val="{{ false }}">
+<span style="font-size: 13px; color: #8E2019; line-height: 1.4">{{w.note}}</span>
+</sc-if>
+<a href="Verb.dc.html" style="font-size: 13px; font-weight: 700; text-decoration: none">Fiche complète (futur, impératif) ›</a>
+</div>
+</sc-if>

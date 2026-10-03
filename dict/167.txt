@@ -1,0 +1,144 @@
+наде'ть|25|mettre (un vêtement)|v
+на'до|24|il faut|adv
+найти'|16|trouver|v
+наконе'ц|16|enfin|adv
+напра'во|21|à droite|adv
+напро'тив|19|en face|adv
+наро'дный|15|populaire, folklorique|adj
+на'сморк|14|rhume (nez qui coule)|nm
+находи'ться|12|se trouver|v
+национа'льность|5|nationalité|nf
+начина'ть|14|commencer|v
+начина'ться|16|commencer (intr.)|v
+наш|5|notre, nos|pron
+неде'ля|9|semaine|nf
+не' за что|5|de rien|expr
+нельзя'|7|il est interdit, on ne peut pas|adv
+не'мец/не'мка|5|Allemand / Allemande|nm
+неме'цкий|5|allemand|adj
+ненави'деть|28|détester, haïr|v
+не'нависть|28|haine|nf
+не'сколько|25|quelques, plusieurs|num
+нет|1|non|part
+неудо'бно|24|c'est gênant, inconfortable|adv
+неуже'ли|25|est-ce possible ?, vraiment ?|part
+нефть|12|pétrole|nf
+никогда'|14|jamais|adv
+никуда'|19|nulle part (direction)|adv
+ничего'|3|rien ; ça va|pron
+но|5|mais|conj
+но'вости|28|nouvelles, actualités|npl
+но'вый|8|nouveau|adj
+нога'|14|jambe, pied|nf
+нож|3|couteau|nm
+норма'льно|4|ça va, normalement|adv
+нос|14|nez|nm
+носки'|28|chaussettes|npl
+но'та|1|note (de musique)|nf
+ноутбу'к|14|ordinateur portable|nm
+ночь|11|nuit|nf
+ноя'брь|18|novembre|nm
+нра'виться|15|plaire|v
+ну'жно|18|il faut|adv
+обе'д|11|déjeuner|nm
+обе'дать|16|déjeuner (verbe)|v
+обижа'ться|27|se vexer|v
+обменя'ть|9|échanger, changer (de l'argent)|v
+обра'тно|19|en retour, de retour|adv
+общежи'тие|12|foyer d'étudiants|nn
+о'бщий|18|commun|adj
+обы'чно|11|d'habitude|adv
+обяза'тельно|14|absolument, sans faute|adv
+о'вощ|11|légume|nm
+огуре'ц|11|concombre|nm
+одева'ться|28|s'habiller|v
+одеколо'н|18|eau de Cologne|nm
+оди'н|1|un|num
+оди'ннадцатый|11|onzième|num
+оди'ннадцать|11|onze|num
+одна'жды|16|un jour, une fois|adv
+окно'|1|fenêtre|nn
+о'коло|28|près de|prep
+октя'брь|18|octobre|nm
+омле'т|11|omelette|nm
+он|1|il|pron
+она'|1|elle|pron
+они'|1|ils, elles|pron
+оно'|1|il (neutre)|pron
+о'пера|11|opéra|nf
+описа'ть|27|décrire|v
+опозда'ть|14|être en retard|v
+организо'ванный|27|organisé|adj
+о'сень|18|automne|nf
+осо'бенно|19|surtout, particulièrement|adv
+оставля'ть|28|laisser|v
+остана'вливать|19|arrêter|v
+остано'вка|19|arrêt (de bus)|nf
+осторо'жно|23|prudemment ; attention !|adv
+остроу'мный|27|spirituel, plein d'esprit|adj
+отвеча'ть|7|répondre|v
+отдыха'ть|6|se reposer|v
+оте'ц|3|père|nm
+открыва'ть|24|ouvrir|v
+отли'чно|15|excellent, parfaitement|adv
+о'тпуск|19|congés, vacances|nm
+о'тчество|25|patronyme|nn
+официа'нт|3|serveur|nm
+о'чень|8|très|adv
+очки'|8|lunettes|npl
+оши'бка|26|erreur, faute|nf
+па'лец|14|doigt|nm
+пальто'|8|manteau|nn
+па'па|2|papa|nm
+парк|8|parc|nm
+паште'т|11|pâté|nm
+пельме'ни|11|pelmeni (raviolis russes)|npl
+пенсионе'р|6|retraité|nm
+пе'нсия|12|retraite|nf
+перево'д|11|traduction|nm
+переводи'ть|18|traduire|v
+пе'рвый|1|premier|num
+переда'ть|13|transmettre, passer|v
+пе'ред|28|devant, avant|prep
+пе'рец|11|poivre, poivron|nm
+пе'рсик|15|pêche (fruit)|nm
+пе'сня|11|chanson|nf
+пече'нье|15|biscuits|nn
+пешко'м|19|à pied|adv
+пи'во|1|bière|nn
+пирами'да|12|pyramide|nf
+пирожо'к|23|petit pâté, pirojok|nm
+писа'тель|18|écrivain|nm
+писа'ть|6|écrire|v
+письмо'|4|lettre|nn
+пить|9|boire|v
+пища'ть|24|piailler, couiner|v
+пла'вать|21|nager|v
+пла'кать|23|pleurer|v
+планше'т|4|tablette|nm
+плати'ть|16|payer|v
+пла'тье|8|robe|nn
+племя'нник|23|neveu|nm
+пло'хо|4|mal|adv
+пло'щадь|8|place|nf
+пляж|24|plage|nm
+по'вар|3|cuisinier|nm
+пого'да|1|météo, temps|nf
+под|27|sous|prep
+пода'рок|18|cadeau|nm
+подле'ц|25|crapule, salaud|nm
+поднима'ть|19|lever, soulever|v
+подру'га|1|amie|nf
+подчёркивать|26|souligner|v
+по'езд|19|train|nm
+пое'здка|20|voyage, trajet|nf
+пое'хать|20|partir (en véhicule)|v
+пожа'луйста|3|s'il vous plaît ; je vous en prie|expr
+по'здно|21|tard|adv
+поздравле'ние|22|félicitations, vœux|nn
+поздравля'ть|23|féliciter|v
+по'зже|13|plus tard|adv
+познако'миться|1|faire connaissance|v
+пойти'|20|aller, partir (à pied)|v
+пока'|2|salut (au revoir) ; pendant que|expr
+пока'зывать|14|montrer|v

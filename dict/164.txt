@@ -1,0 +1,131 @@
+а|5|et, mais|conj
+абсолю'тно|18|absolument|adv
+а'вгуст|18|août|nm
+авто'бус|1|autobus|nm
+альбо'м|11|album|nm
+америка'нец/америка'нка|5|Américain / Américaine|nm
+америка'нский|5|américain|adj
+анана'с|11|ananas|nm
+англи'йский|5|anglais|adj
+апельси'н|11|orange (fruit)|nm
+аппети'т|14|appétit|nm
+апре'ль|18|avril|nm
+ара'б/ара'бка|5|Arabe (homme / femme)|nm
+ара'бский|5|arabe|adj
+арбу'з|11|pastèque|nm
+арти'ст|3|artiste|nm
+аудиоте'кст|11|texte audio|nm
+аудито'рия|7|salle de cours|nf
+ба'бушка|6|grand-mère|nf
+балери'на|3|ballerine|nf
+бале'т|11|ballet|nm
+бана'н|11|banane|nm
+банк|12|banque|nm
+ба'ня|20|bania (bains russes)|nf
+баскетбо'л|12|basket-ball|nm
+бассе'йн|24|piscine|nm
+батон|18|baguette de pain|nm
+беда'|26|malheur|nf
+бесе'дка|28|tonnelle, kiosque de jardin|nf
+библиоте'ка|12|bibliothèque|nf
+биле'т|9|billet, ticket|nm
+блин|11|crêpe|nm
+бло'гер|5|blogueur|nm
+боле'ть|14|être malade ; avoir mal|v
+больни'ца|12|hôpital|nf
+бо'льше всего'|15|plus que tout|expr
+большо'й|8|grand|adj
+борщ|11|bortsch|nm
+боя'ться|13|avoir peur|v
+брат|2|frère|nm
+брать|16|prendre|v
+буке'т|18|bouquet|nm
+бу'сы|27|collier (de perles)|npl
+бутербро'д|11|sandwich, tartine|nm
+бы'стро|7|vite|adv
+быть|13|être|v
+бюро'|2|bureau, agence|nn
+в|9|dans, à, en|prep
+ва'жно|13|c'est important|adv
+ва'жный|9|important|adj
+ва'нна|1|baignoire, bain|nf
+варе'нье|11|confiture|nn
+вари'ть|26|faire cuire|v
+ваш|8|votre, vos|pron
+вдруг|28|soudain|adv
+велосипе'д|19|vélo|nm
+весёлый|27|joyeux, gai|adj
+весна'|18|printemps|nf
+вести'|25|mener, conduire|v
+весь|19|tout, entier|pron
+ве'тер|14|vent|nm
+ве'чер|2|soir, soirée|nm
+вечери'нка|13|fête, soirée|nf
+взять|16|prendre|v
+ви'деть|13|voir|v
+ви'за|24|visa|nf
+ви'лка|28|fourchette|nf
+вино'|1|vin|nn
+виногра'д|11|raisin|nm
+висе'ть|28|être accroché, pendre|v
+витами'н|14|vitamine|nm
+ВКонта'кте|11|VKontakte (réseau social)|expr
+вку'сный|15|délicieux, bon|adj
+влюби'ться|28|tomber amoureux|v
+вме'сте|15|ensemble|adv
+внима'тельно|7|attentivement|adv
+во-вторы'х|20|deuxièmement|adv
+вода'|1|eau|nf
+возвраща'ться|24|revenir, rentrer|v
+во'здух|28|air|nm
+вокза'л|12|gare|nm
+вокру'г|26|autour (de)|prep
+волейбо'л|24|volley-ball|nm
+во'лосы|27|cheveux|npl
+во-пе'рвых|20|premièrement|adv
+во'семь|8|huit|num
+во'семьдесят|15|quatre-vingts|num
+восемьсо'т|15|huit cents|num
+воскресе'нье|9|dimanche|nn
+воспи'танный|27|bien élevé|adj
+восто'к|12|est (point cardinal)|nm
+восьмо'й|8|huitième|num
+вот|4|voici, voilà|part
+врач|3|médecin|nm
+вре'мя|2|temps, heure|nn
+все|8|tous, tout le monde|pron
+всегда'|16|toujours|adv
+вспомина'ть|19|se souvenir, se rappeler|v
+встава'ть|16|se lever|v
+встре'ча|13|rencontre, rendez-vous|nf
+встреча'ть|13|rencontrer, accueillir|v
+встреча'ться|23|se rencontrer, se voir|v
+вто'рник|9|mardi|nm
+второ'й|2|deuxième|num
+вулка'н|12|volcan|nm
+вчера'|13|hier|adv
+вы|3|vous|pron
+выбира'ть|15|choisir|v
+вы'бросить|26|jeter|v
+вы'глядеть|27|avoir l'air, paraître|v
+высо'кий|14|haut, grand|adj
+вы'ставка|18|exposition|nf
+выходи'ть|20|sortir|v
+выходно'й|26|jour de congé|nm
+га'дость|28|chose dégoûtante, horreur|nf
+газе'та|3|journal|nf
+га'лстук|28|cravate|nm
+где|6|où|adv
+геро'й|27|héros|nm
+гита'ра|12|guitare|nf
+гла'вный|8|principal|adj
+глаз|14|œil|nm
+глу'пый|27|bête, stupide|adj
+говори'ть|5|parler, dire|v
+год|18|année, an|nm
+голова'|14|tête|nf
+голубо'й|8|bleu clair|adj
+гора'|20|montagne|nf
+го'рло|14|gorge|nn
+го'род|1|ville|nm
+горя'чий|14|chaud, brûlant|adj

@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Fiche verbe</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Marck+Script&amp;family=PT+Sans:wght@400;700&amp;family=PT+Serif:wght@400;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#2340A0}a:hover{color:#16296B}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; display: flex; flex-direction: column; background: #F3F4F7; font-family: 'PT Sans', sans-serif; color: #161B2E">
+<main style="flex-grow: 1; min-height: 0; overflow-y: auto; display: flex; flex-direction: column; gap: 16px; padding: 20px 20px 24px">
+<div style="display: flex; align-items: center; gap: 10px">
+<a href="Dictionary.dc.html" aria-label="Retour au dictionnaire" style="display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; flex-shrink: 0; border-radius: 22px; background: #FFFFFF; color: #161B2E">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"></path></svg></a>
+<label style="display: flex; flex-direction: column; gap: 2px; flex-grow: 1; font-size: 12px; color: #5A6074">Verbe ({{verbCount}} débloqués)
+<select value="{{key}}" onChange="{{pickVerb}}" style="height: 44px; border: 1px solid #D5D8E0; border-radius: 10px; padding: 0 10px; background: #FFFFFF; font-family: 'PT Serif', serif; font-size: 16px; color: #161B2E">
+<sc-for list="{{options}}" as="o" hint-placeholder-count="5">
+<option value="{{o.k}}">{{o.label}}</option>
+</sc-for>
+</select></label>
+</div>
+
+<sc-if value="{{ready}}" hint-placeholder-val="{{ true }}">
+<header style="display: flex; flex-direction: column; gap: 4px">
+<h1 style="margin: 0; font-family: 'PT Serif', serif; font-size: 38px">{{ru}}</h1>
+<span style="font-family: 'Marck Script', cursive; font-size: 42px; color: #2340A0; line-height: 1.1; border-bottom: 1px solid #C9D3F0">{{cur}}</span>
+<span style="font-size: 18px; margin-top: 4px">{{fr}}</span>
+<div style="display: flex; gap: 6px; flex-wrap: wrap; margin-top: 6px">
+<span style="font-size: 13px; font-weight: 700; padding: 5px 10px; border-radius: 6px; background: #FBE6E4; color: #8E2019">{{aspect}}</span>
+<span style="font-size: 13px; font-weight: 700; padding: 5px 10px; border-radius: 6px; background: #E4E9F7; color: #1C3488">{{group}}</span>
+<sc-if value="{{pair}}" hint-placeholder-val="{{ true }}">
+<span style="font-size: 13px; font-weight: 700; padding: 5px 10px; border-radius: 6px; background: #FFFFFF; color: #3A4056; border: 1px solid #D5D8E0">{{pairLabel}} {{pair}}</span>
+</sc-if>
+<span style="font-size: 13px; font-weight: 700; padding: 5px 10px; border-radius: 6px; background: #FFFFFF; color: #3A4056; border: 1px solid #D5D8E0">Leçon {{lesson}}</span>
+</div>
+</header>
+
+<div role="group" aria-label="Temps" style="display: flex; gap: 4px; background: #E2E4EA; border-radius: 12px; padding: 4px">
+<sc-for list="{{tenses}}" as="t" hint-placeholder-count="4">
+<button type="button" onClick="{{t.pick}}" style="flex: 1 1 0; min-height: 40px; border: none; border-radius: 9px; font: inherit; font-size: 14px; font-weight: 700; cursor: pointer; {{t.style}}">{{t.label}}</button>
+</sc-for>
+</div>
+
+<section style="display: flex; flex-direction: column; background: #FFFFFF; border-radius: 16px; padding: 6px 16px">
+<sc-for list="{{rows}}" as="r" hint-placeholder-count="6">
+<div style="display: grid; grid-template-columns: 64px minmax(0, 1fr) minmax(0, 1fr); align-items: center; gap: 8px; min-height: 54px; border-bottom: 1px solid #ECEEF2">
+<span style="font-size: 15px; color: #5A6074">{{r.p}}</span>
+<span style="font-family: 'PT Serif', serif; font-size: 17px">{{r.stem}}<span style="color: #B42A22; font-weight: 700">{{r.end}}</span>{{r.rest}}</span>
+<span style="font-family: 'Marck Script', cursive; font-size: 23px; color: #2340A0">{{r.cur}}</span>
+</div>
+</sc-for>
+<sc-if value="{{noRows}}" hint-placeholder-val="{{ false }}">
+<span style="font-size: 15px; color: #5A6074; padding: 14px 0">Pas d'impératif pour ce verbe.</span>
+</sc-if>
+</section>
+
+<section style="display: flex; gap: 10px; background: #E4E9F7; border-radius: 14px; padding: 14px 16px; color: #1C3488">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="flex-shrink: 0; margin-top: 1px"><circle cx="12" cy="12" r="9"></circle><path d="M12 11v6M12 7.5v.01"></path></svg>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<span style="font-size: 15px; line-height: 1.4">{{rule}}</span>
+<sc-if value="{{note}}" hint-placeholder-val="{{ false }}">
+<span style="font-size: 15px; line-height: 1.4; color: #8E2019">{{note}}</span>
+</sc-if>
+</div>
+</section>
+</sc-if>
+<sc-if value="{{loading}}" hint-placeholder-val="{{ false }}">
+<span style="font-size: 15px; color: #5A6074">Chargement du dictionnaire…</span>
+</sc-if>
+</main>
+<nav style="display: flex; justify-content: space-around; align-items: center; height: 76px; flex-shrink: 0; background: #FFFFFF; border-top: 1px solid #E2E4EA; padding: 0 8px 8px">
+<a href="Main.dc.html" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; min-width: 64px; min-height: 52px; text-decoration: none; font-size: 12px; color: #5A6074">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1z"></path></svg>Accueil</a>
+<a href="Dictionary.dc.html" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; min-width: 64px; min-height: 52px; text-decoration: none; font-size: 12px; color: #B42A22; font-weight: 700">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4.5A1.5 1.5 0 0 1 5.5 3H20v15H5.5A1.5 1.5 0 0 0 4 19.5z"></path><path d="M4 19.5A1.5 1.5 0 0 0 5.5 21H20"></path></svg>Dico</a>
+<a href="LogLesson.dc.html" aria-label="Valider une leçon" style="display: flex; align-items: center; justify-content: center; width: 52px; height: 52px; border-radius: 26px; background: #B42A22; color: #FFFFFF">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"></path></svg></a>
+<a href="Grammar.dc.html" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; min-width: 64px; min-height: 52px; text-decoration: none; font-size: 12px; color: #5A6074">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"></rect><path d="M3 10h18M9 4v16"></path></svg>Grammaire</a>
+</nav>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"lessonsDone":{"editor":"int","default":6,"min":1,"max":28,"section":"Démo"},"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+constructor(props) {
+super(props);
+this.state = { data: null, key: '', tense: 'pres' };
+}
+componentDidMount() {
+this.loadDict();
+}
+loadDict() {
+fetch('/_blob/20a388f53ee5cb9a1808aff46657be5e').then((r) => r.json()).then((d) => this.setState({ data: d })).catch(() => this.setState({ failed: true }));
+}
+strip(s) {
+return s.replace(/́/g, '');
+}
+sortKey(w) {
+return this.strip(w.ru).toLowerCase().replace(/^\(к\)\s*/, '').replace(/^[^а-яё]+/, '');
+}
+tag(t) {
+const m = { nm: ['nom m.', 'n'], nf: ['nom f.', 'n'], nn: ['nom n.', 'n'], npl: ['nom pl.', 'n'], v: ['verbe', 'v'], adj: ['adjectif', 'o'], adv: ['adverbe', 'o'], pron: ['pronom', 'o'], prep: ['préposition', 'o'], conj: ['conjonction', 'o'], num: ['nombre', 'o'], part: ['particule', 'o'], expr: ['expression', 'e'] };
+const s = { n: 'background: #E4E9F7; color: #1C3488', v: 'background: #FBE6E4; color: #8E2019', e: 'background: #E3F1EC; color: #1B5E4C', o: 'background: #EEEFF3; color: #3A4056' };
+const x = m[t] || ['', 'o'];
+return { label: x[0], style: s[x[1]], kind: x[1] };
+}
+split(forms) {
+const real = forms.filter((f) => f && f !== '—');
+let p = real[0] || '';
+real.forEach((f) => { while (p && f.indexOf(p) !== 0) p = p.slice(0, -1); });
+return forms.map((f) => (f === '—' ? { stem: '—', end: '', full: '—' } : { stem: f.slice(0, p.length), end: f.slice(p.length), full: f }));
+}
+conj(v, tense, inf) {
+const P = { pres: ['я', 'ты', 'он / она', 'мы', 'вы', 'они'], fut: ['я', 'ты', 'он / она', 'мы', 'вы', 'они'], past: ['он', 'она', 'оно', 'они'], imp: ['ты', 'вы'] };
+if (tense === 'fut') {
+const b = ['буду', 'будешь', 'будет', 'будем', 'будете', 'будут'];
+return this.split(b).map((f, i) => ({ p: P.fut[i], stem: f.stem, end: f.end, rest: ' ' + inf, cur: f.full + ' ' + inf }));
+}
+const forms = tense === 'pres' ? v.pres : tense === 'past' ? v.past : v.imp;
+return this.split(forms).map((f, i) => ({ p: P[tense][i], stem: f.stem, end: f.end, rest: '', cur: f.full }));
+}
+verbInfo(v) {
+if (!v) return '';
+const g = v.g === 'irr' ? 'irrégulier' : v.g === '1' ? '1re conjugaison' : '2e conjugaison';
+return (v.a === 'pf' ? 'Perfectif' : 'Imperfectif') + ' · ' + g + (v.pair ? ' · ' + (v.a === 'pf' ? 'imperf. : ' : 'perf. : ') + v.pair : '');
+}
+item(w, data, open, mode) {
+const key = this.strip(w.ru);
+const t = this.tag(w.t);
+const v = w.t === 'v' ? data.verbs[key] : null;
+const isOpen = !!v && open === key;
+return {
+ru: w.ru, cur: key, fr: w.fr, l: w.l, tagLabel: t.label, tagStyle: t.style, kind: t.kind,
+isVerb: !!v, isOpen, span: isOpen ? '1 / -1' : 'auto',
+showPrint: mode !== 'cursive', showCursive: mode !== 'print',
+toggle: () => this.setState({ open: isOpen ? '' : key }),
+toggleLabel: isOpen ? 'Masquer la conjugaison' : 'Voir la conjugaison',
+info: this.verbInfo(v),
+presLabel: v && v.a === 'pf' ? 'Futur' : 'Présent',
+pres: isOpen ? this.conj(v, 'pres') : [],
+past: isOpen ? this.conj(v, 'past') : [],
+note: v ? v.note : ''
+};
+}
+seg(list, cur, key) {
+const on = 'background: #FFFFFF; color: #161B2E; box-shadow: 0 1px 2px rgba(22,27,46,0.12)';
+const off = 'background: transparent; color: #5A6074';
+return list.map(([id, label]) => ({ label, style: id === cur ? on : off, pick: () => this.setState({ [key]: id }) }));
+}
+chips(list, cur, key) {
+return list.map(([id, label]) => ({
+label,
+style: id === cur ? 'background: #161B2E; color: #FFFFFF; border: 1px solid #161B2E' : 'background: #FFFFFF; color: #161B2E; border: 1px solid #D5D8E0',
+pick: () => this.setState({ [key]: id })
+}));
+}
+renderVals() {
+const { data, tense } = this.state;
+const done = Math.min(28, Math.max(1, this.props.lessonsDone ?? 6));
+const base = { loading: !data, ready: false, options: [], verbCount: 0, key: '', pickVerb: () => {}, tenses: [], rows: [] };
+if (!data) return base;
+const list = data.words.filter((w) => w.t === 'v' && w.l <= done).sort((a, b) => this.sortKey(a).localeCompare(this.sortKey(b), 'ru'));
+if (!list.length) return { ...base, loading: false };
+const keys = list.map((w) => this.strip(w.ru));
+const key = keys.indexOf(this.state.key) >= 0 ? this.state.key : (keys.indexOf('читать') >= 0 ? 'читать' : keys[0]);
+const w = list[keys.indexOf(key)];
+const v = data.verbs[key];
+const pf = v.a === 'pf';
+const tl = pf ? [['pres', 'Futur'], ['past', 'Passé'], ['imp', 'Impér.']] : [['pres', 'Présent'], ['past', 'Passé'], ['fut', 'Futur'], ['imp', 'Impér.']];
+const t = tl.some((x) => x[0] === tense) ? tense : 'pres';
+const inf = key.replace(/\s.*$/, '');
+const rows = this.conj(v, t, inf);
+const rules = {
+pres: pf ? 'Les verbes perfectifs n\'ont pas de présent : ces formes expriment le futur.' : v.g === '1' ? '1re conjugaison : -ю (-у), -ешь, -ет, -ем, -ете, -ют (-ут).' : v.g === '2' ? '2e conjugaison : -ю (-у), -ишь, -ит, -им, -ите, -ят (-ат).' : 'Verbe irrégulier : formes à apprendre par cœur.',
+past: 'Passé : radical + -л (m.), -ла (f.), -ло (n.), -ли (pl.). Il s\'accorde en genre et en nombre, pas en personne.',
+fut: 'Futur composé des imperfectifs : быть au futur + infinitif.',
+imp: 'Impératif : forme en ты et en вы (-те). Avec la négation, on emploie plutôt l\'imperfectif.'
+};
+return {
+loading: false, ready: true, key, verbCount: list.length,
+options: list.map((x) => ({ k: this.strip(x.ru), label: this.strip(x.ru) + ' — ' + x.fr })),
+pickVerb: (e) => this.setState({ key: e.target.value }),
+ru: w.ru, cur: key, fr: w.fr, lesson: w.l,
+aspect: pf ? 'Perfectif' : 'Imperfectif',
+group: v.g === 'irr' ? 'Irrégulier' : v.g === '1' ? '1re conjugaison' : '2e conjugaison',
+pair: v.pair, pairLabel: pf ? 'Imperfectif :' : 'Perfectif :',
+tenses: this.seg(tl, t, 'tense'),
+rows, noRows: rows.length === 0, rule: rules[t], note: v.note
+};
+}
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+%%SHELL:Verbes — ordinateur:verb%%
+<header style="display: flex; justify-content: space-between; align-items: flex-end; gap: 16px; flex-wrap: wrap">
+<div style="display: flex; flex-direction: column">
+<h1 style="margin: 0; font-family: 'PT Serif', serif; font-size: 34px">Verbes</h1>
+<span style="font-size: 15px; color: #5A6074">{{verbCount}} verbes débloqués dans les leçons 1 à {{done}}</span>
+</div>
+</header>
+
+<div style="display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-start">
+<aside style="flex: 1 1 260px; min-width: 0; display: flex; flex-direction: column; gap: 10px; background: #FFFFFF; border-radius: 18px; padding: 16px">
+<label style="display: flex; align-items: center; gap: 8px; height: 44px; border: 1px solid #D5D8E0; border-radius: 10px; padding: 0 12px; color: #5A6074">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="6"></circle><path d="M20 20l-4.5-4.5"></path></svg>
+<span style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Rechercher un verbe</span>
+<input type="search" value="{{q}}" onChange="{{onQ}}" placeholder="Chercher un verbe" style="flex-grow: 1; border: none; outline: none; font: inherit; font-size: 15px; color: #161B2E; background: transparent; min-width: 0">
+</label>
+<div style="display: flex; flex-direction: column; gap: 2px; max-height: 640px; overflow-y: auto">
+<sc-for list="{{options}}" as="o" hint-placeholder-count="10">
+<button type="button" onClick="{{o.pick}}" style="display: flex; justify-content: space-between; align-items: baseline; gap: 8px; min-height: 44px; padding: 6px 10px; border: none; border-radius: 10px; font: inherit; text-align: left; cursor: pointer; {{o.style}}">
+<span style="font-family: 'PT Serif', serif; font-size: 16px; font-weight: 700">{{o.k}}</span>
+<span style="font-size: 13px; opacity: 0.8; text-align: right">{{o.fr}}</span>
+</button>
+</sc-for>
+</div>
+</aside>
+
+<sc-if value="{{ready}}" hint-placeholder-val="{{ true }}">
+<section style="flex: 3 1 520px; min-width: 0; display: flex; flex-direction: column; gap: 18px">
+<div style="display: flex; flex-direction: column; gap: 4px; background: #FFFFFF; border-radius: 18px; padding: 24px">
+<div style="display: flex; align-items: baseline; gap: 24px; flex-wrap: wrap">
+<span style="font-family: 'PT Serif', serif; font-size: 44px; font-weight: 700">{{ru}}</span>
+<span style="font-family: 'Marck Script', cursive; font-size: 48px; color: #2340A0">{{cur}}</span>
+</div>
+<span style="font-size: 19px">{{fr}}</span>
+<div style="display: flex; gap: 6px; flex-wrap: wrap; margin-top: 8px">
+<span style="font-size: 13px; font-weight: 700; padding: 5px 10px; border-radius: 6px; background: #FBE6E4; color: #8E2019">{{aspect}}</span>
+<span style="font-size: 13px; font-weight: 700; padding: 5px 10px; border-radius: 6px; background: #E4E9F7; color: #1C3488">{{group}}</span>
+<sc-if value="{{pair}}" hint-placeholder-val="{{ true }}">
+<span style="font-size: 13px; font-weight: 700; padding: 5px 10px; border-radius: 6px; background: #FFFFFF; color: #3A4056; border: 1px solid #D5D8E0">{{pairLabel}} {{pair}}</span>
+</sc-if>
+<span style="font-size: 13px; font-weight: 700; padding: 5px 10px; border-radius: 6px; background: #FFFFFF; color: #3A4056; border: 1px solid #D5D8E0">Leçon {{lesson}}</span>
+</div>
+</div>
+
+<div role="group" aria-label="Temps" style="display: flex; gap: 4px; background: #E2E4EA; border-radius: 12px; padding: 4px; max-width: 520px">
+<sc-for list="{{tenses}}" as="t" hint-placeholder-count="4">
+<button type="button" onClick="{{t.pick}}" style="flex: 1 1 0; min-height: 40px; border: none; border-radius: 9px; font: inherit; font-size: 14px; font-weight: 700; cursor: pointer; {{t.style}}">{{t.label}}</button>
+</sc-for>
+</div>
+
+<div style="display: flex; flex-wrap: wrap; gap: 18px; align-items: flex-start">
+<div style="flex: 2 1 360px; min-width: 0; display: flex; flex-direction: column; background: #FFFFFF; border-radius: 16px; padding: 6px 20px">
+<sc-for list="{{rows}}" as="r" hint-placeholder-count="6">
+<div style="display: grid; grid-template-columns: 90px minmax(0, 1fr) minmax(0, 1fr); align-items: center; gap: 12px; min-height: 56px; border-bottom: 1px solid #ECEEF2">
+<span style="font-size: 15px; color: #5A6074">{{r.p}}</span>
+<span style="font-family: 'PT Serif', serif; font-size: 19px">{{r.stem}}<span style="color: #B42A22; font-weight: 700">{{r.end}}</span>{{r.rest}}</span>
+<span style="font-family: 'Marck Script', cursive; font-size: 26px; color: #2340A0">{{r.cur}}</span>
+</div>
+</sc-for>
+<sc-if value="{{noRows}}" hint-placeholder-val="{{ false }}">
+<span style="font-size: 15px; color: #5A6074; padding: 14px 0">Pas d'impératif pour ce verbe.</span>
+</sc-if>
+</div>
+<div style="flex: 1 1 240px; display: flex; flex-direction: column; gap: 8px; background: #E4E9F7; border-radius: 16px; padding: 18px; color: #1C3488">
+<span style="font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em">Règle</span>
+<span style="font-size: 15px; line-height: 1.45">{{rule}}</span>
+<sc-if value="{{note}}" hint-placeholder-val="{{ false }}">
+<span style="font-size: 15px; line-height: 1.45; color: #8E2019">{{note}}</span>
+</sc-if>
+</div>
+</div>
+</section>
+</sc-if>
+<sc-if value="{{loading}}" hint-placeholder-val="{{ false }}">
+<span style="font-size: 15px; color: #5A6074">Chargement du dictionnaire…</span>
+</sc-if>
+</div>
+%%SHELLEND:960%%
+<script type="text/x-dc" data-dc-script data-props='{"lessonsDone":{"editor":"int","default":6,"min":1,"max":28,"section":"Démo"},"$preview":{"width":1280,"height":960}}'>
+class Component extends DCLogic {
+constructor(props) {
+super(props);
+this.state = { data: null, key: '', tense: 'pres', q: '' };
+}
+componentDidMount() {
+this.loadDict();
+}
+%%COMMON%%
+renderVals() {
+const { data, tense, q } = this.state;
+const done = Math.min(28, Math.max(1, this.props.lessonsDone ?? 6));
+const base = { done, loading: !data, ready: false, options: [], verbCount: 0, tenses: [], rows: [], q, onQ: (e) => this.setState({ q: e.target.value }) };
+if (!data) return base;
+const list = data.words.filter((w) => w.t === 'v' && w.l <= done).sort((a, b) => this.sortKey(a).localeCompare(this.sortKey(b), 'ru'));
+if (!list.length) return { ...base, loading: false };
+const keys = list.map((w) => this.strip(w.ru));
+const key = keys.indexOf(this.state.key) >= 0 ? this.state.key : (keys.indexOf('читать') >= 0 ? 'читать' : keys[0]);
+const w = list[keys.indexOf(key)];
+const v = data.verbs[key];
+const pf = v.a === 'pf';
+const tl = pf ? [['pres', 'Futur'], ['past', 'Passé'], ['imp', 'Impératif']] : [['pres', 'Présent'], ['past', 'Passé'], ['fut', 'Futur'], ['imp', 'Impératif']];
+const t = tl.some((x) => x[0] === tense) ? tense : 'pres';
+const inf = key.replace(/\s.*$/, '');
+const rows = this.conj(v, t, inf);
+const rules = {
+pres: pf ? 'Les verbes perfectifs n\'ont pas de présent : ces formes expriment le futur.' : v.g === '1' ? '1re conjugaison : -ю (-у), -ешь, -ет, -ем, -ете, -ют (-ут).' : v.g === '2' ? '2e conjugaison : -ю (-у), -ишь, -ит, -им, -ите, -ят (-ат).' : 'Verbe irrégulier : formes à apprendre par cœur.',
+past: 'Passé : radical + -л (m.), -ла (f.), -ло (n.), -ли (pl.). Il s\'accorde en genre et en nombre, pas en personne.',
+fut: 'Futur composé des imperfectifs : быть au futur + infinitif.',
+imp: 'Impératif : forme en ты et en вы (-те). Avec la négation, on emploie plutôt l\'imperfectif.'
+};
+const query = this.strip(q).toLowerCase().trim();
+const on = 'background: #161B2E; color: #FFFFFF';
+const off = 'background: transparent; color: #161B2E';
+return {
+...base, loading: false, ready: true, verbCount: list.length,
+options: list.filter((x) => !query || this.strip(x.ru).indexOf(query) >= 0 || x.fr.toLowerCase().indexOf(query) >= 0).map((x) => {
+const k = this.strip(x.ru);
+return { k, fr: x.fr, style: k === key ? on : off, pick: () => this.setState({ key: k }) };
+}),
+ru: w.ru, cur: key, fr: w.fr, lesson: w.l,
+aspect: pf ? 'Perfectif' : 'Imperfectif',
+group: v.g === 'irr' ? 'Irrégulier' : v.g === '1' ? '1re conjugaison' : '2e conjugaison',
+pair: v.pair, pairLabel: pf ? 'Imperfectif :' : 'Perfectif :',
+tenses: this.seg(tl, t, 'tense'),
+rows, noRows: rows.length === 0, rule: rules[t], note: v.note
+};
+}
+}
+</script>
+</body>
+</html>
